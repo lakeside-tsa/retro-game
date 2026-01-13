@@ -1,0 +1,317 @@
+[gd_scene load_steps=26 format=3 uid="uid://bjmsqj0xkjmlr"]
+
+[ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://scripts/level_1.gd" id="1_kd0sr"]
+[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
+[ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://assets/Sign.png" id="2_ekjwa"]
+[ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="3_ahxml"]
+[ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
+[ext_resource type="FontFile" uid="uid://dsqwije2j027h" path="res://assets/Other/Peaberry Base/Peaberry-Base.otf" id="6_c0ed7"]
+[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
+[ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
+[ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://assets/Ingredients/Seaweed.png" id="9_2cbcq"]
+[ext_resource type="Shader" uid="uid://bt6exfb87rxjq" path="res://shaders/water.gdshader" id="9_bhve8"]
+[ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://assets/Ingredients/Crab.png" id="10_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="10_x2xxo"]
+[ext_resource type="PackedScene" uid="uid://p2sk2yofect7" path="res://scenes/lv1_ing1_shape.tscn" id="11_2cbcq"]
+[ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
+[ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://scripts/whalepath.gd" id="13_salhk"]
+[ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/whale.tscn" id="14_6a2pp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x2xxo"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
+noise_type = 2
+frequency = 0.013
+fractal_type = 2
+fractal_gain = 0.98
+fractal_weighted_strength = 0.75
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_putd4"]
+width = 128
+height = 128
+seamless = true
+seamless_blend_skirt = 0.6
+noise = SubResource("FastNoiseLite_457nn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xah76"]
+shader = ExtResource("9_bhve8")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
+shader_parameter/speed = Vector2(0.02, 0.05)
+shader_parameter/wave_strength = 2.0
+shader_parameter/fade_start = 0.2
+shader_parameter/fade_end = 0.8
+
+[sub_resource type="Curve2D" id="Curve2D_a7vwt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2911, 1322, -76, -8, 76, 8, -659, 1198)
+}
+point_count = 2
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qahy4"]
+normal = Vector2(1, 0)
+distance = 267.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_muolu"]
+normal = Vector2(-1, 0)
+distance = -36.0
+
+[node name="level_1" type="Node"]
+script = ExtResource("1_kd0sr")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-26, 398)
+scale = Vector2(5.125, 3.07813)
+texture = ExtResource("2_ekjwa")
+
+[node name="OverlayScene" parent="." instance=ExtResource("2_ptpf1")]
+
+[node name="Cauldron" parent="." instance=ExtResource("7_rubto")]
+z_index = 1
+position = Vector2(115, 439)
+scale = Vector2(0.6, 0.6)
+
+[node name="IngredientManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_sy0kq")
+
+[node name="IngCounter" type="Label" parent="IngredientManager"]
+texture_filter = 1
+offset_left = -82.0
+offset_top = 378.0
+offset_right = 211.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("6_c0ed7")
+text = "The
+Beach"
+
+[node name="Ingredients" type="Node" parent="."]
+
+[node name="ing2_sw1" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(2333, 1716)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw1" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw1"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing2_sw2" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(1244, 1615)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw2" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw2"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing2_sw3" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-1253, 1648)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw3" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw3"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing2_sw4" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-2901, 1760)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw4" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw4"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing2_sw5" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-2901, 1760)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw5" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw5"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c1" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-1943, 1558)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c1" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c1"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c2" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-121, 1170)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c2" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c2"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c3" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(692, 1552)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c3" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c3"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c4" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(2407, 1443)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c4" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c4"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing1_crate1" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(1953, 1766)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate1" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate1" instance=ExtResource("11_2cbcq")]
+
+[node name="ing1_crate2" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-51, 1763)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate2" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate2" instance=ExtResource("11_2cbcq")]
+
+[node name="ing1_crate3" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-929, 1766)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate3" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate3" instance=ExtResource("11_2cbcq")]
+
+[node name="Level Design" parent="." instance=ExtResource("5_8bxnv")]
+position = Vector2(0, 409)
+
+[node name="SpawnPoint1" type="Marker2D" parent="."]
+position = Vector2(-53, 443)
+
+[node name="SpawnPoint2" type="Marker2D" parent="."]
+position = Vector2(177, 436)
+
+[node name="Shimmer" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_xah76")
+position = Vector2(-106.5, 1631.5)
+scale = Vector2(48.3984, 13.2891)
+texture = ExtResource("10_o8dyn")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Shimmer"]
+position = Vector2(-0.371918, 1.28514)
+scale = Vector2(6.4124, 6.66988)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_uje8k")
+volume_db = -6.0
+autoplay = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(536, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")
+
+[node name="Background2" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(-2915, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")
+
+[node name="Background3" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(3991, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")
+
+[node name="Whale" type="Path2D" parent="."]
+position = Vector2(-8, 8)
+curve = SubResource("Curve2D_a7vwt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Whale"]
+position = Vector2(-2911, 1322)
+rotation = -0.0550066
+script = ExtResource("13_salhk")
+
+[node name="StaticBody2D" parent="Whale/PathFollow2D" instance=ExtResource("14_6a2pp")]
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Boundaries"]
+
+[node name="Leftt" type="CollisionShape2D" parent="Boundaries/RigidBody2D"]
+position = Vector2(-3422, 634)
+shape = SubResource("WorldBoundaryShape2D_qahy4")
+
+[node name="Right" type="CollisionShape2D" parent="Boundaries/RigidBody2D"]
+position = Vector2(2889, 1255)
+shape = SubResource("WorldBoundaryShape2D_muolu")
