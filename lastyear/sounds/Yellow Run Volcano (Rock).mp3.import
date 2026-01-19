@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://md4cxhe3gu13"
-path="res://.godot/imported/Yellow Run Volcano (Rock).mp3-5a4d6793e9cc29f51ce9b68d39cb3da6.mp3str"
+path="res://.godot/imported/Yellow Run Volcano (Rock).mp3-a8dce0b0ff46f7ee3ae793e6ac100e0a.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Yellow Run Volcano (Rock).mp3"
-dest_files=["res://.godot/imported/Yellow Run Volcano (Rock).mp3-5a4d6793e9cc29f51ce9b68d39cb3da6.mp3str"]
+source_file="res://lastyear/sounds/Yellow Run Volcano (Rock).mp3"
+dest_files=["res://.godot/imported/Yellow Run Volcano (Rock).mp3-a8dce0b0ff46f7ee3ae793e6ac100e0a.mp3str"]
 
 [params]
 

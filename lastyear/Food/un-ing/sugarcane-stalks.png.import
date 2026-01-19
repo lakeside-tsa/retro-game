@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfadpnc1qjh3c"
-path="res://.godot/imported/sugarcane-stalks.png-be760db60651b20133ad7c770d76b136.ctex"
+path="res://.godot/imported/sugarcane-stalks.png-13cc74a9f857d980259b3f53456ac3f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Food/un-ing/sugarcane-stalks.png"
-dest_files=["res://.godot/imported/sugarcane-stalks.png-be760db60651b20133ad7c770d76b136.ctex"]
+source_file="res://lastyear/Food/un-ing/sugarcane-stalks.png"
+dest_files=["res://.godot/imported/sugarcane-stalks.png-13cc74a9f857d980259b3f53456ac3f0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c57vx0ccehxqy"
-path="res://.godot/imported/Pink Oyster Mushroom.png-aaee070552f3c5496585666f407cb310.ctex"
+path="res://.godot/imported/Pink Oyster Mushroom.png-d14accf2fe3fe499e8c20bdc7f1703d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ingredients/Pink Oyster Mushroom.png"
-dest_files=["res://.godot/imported/Pink Oyster Mushroom.png-aaee070552f3c5496585666f407cb310.ctex"]
+source_file="res://lastyear/Ingredients/Pink Oyster Mushroom.png"
+dest_files=["res://.godot/imported/Pink Oyster Mushroom.png-d14accf2fe3fe499e8c20bdc7f1703d7.ctex"]
 
 [params]
 

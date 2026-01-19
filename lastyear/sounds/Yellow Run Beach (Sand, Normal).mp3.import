@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bls41tb6uorf4"
-path="res://.godot/imported/Yellow Run Beach (Sand, Normal).mp3-d61ef1d085973ee9ea2680c99bce751d.mp3str"
+path="res://.godot/imported/Yellow Run Beach (Sand, Normal).mp3-111eb3b8371ebfeeecf275de8b897c57.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Yellow Run Beach (Sand, Normal).mp3"
-dest_files=["res://.godot/imported/Yellow Run Beach (Sand, Normal).mp3-d61ef1d085973ee9ea2680c99bce751d.mp3str"]
+source_file="res://lastyear/sounds/Yellow Run Beach (Sand, Normal).mp3"
+dest_files=["res://.godot/imported/Yellow Run Beach (Sand, Normal).mp3-111eb3b8371ebfeeecf275de8b897c57.mp3str"]
 
 [params]
 

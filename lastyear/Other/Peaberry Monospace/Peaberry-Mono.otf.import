@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c8ddm32tgmdjq"
-path="res://.godot/imported/Peaberry-Mono.otf-ed1a7a49d9e2d8df9d9610152ca5ef97.fontdata"
+path="res://.godot/imported/Peaberry-Mono.otf-4c7c4e5978fcf45c881dd2573ab7e224.fontdata"
 
 [deps]
 
-source_file="res://assets/Other/Peaberry Monospace/Peaberry-Mono.otf"
-dest_files=["res://.godot/imported/Peaberry-Mono.otf-ed1a7a49d9e2d8df9d9610152ca5ef97.fontdata"]
+source_file="res://lastyear/Other/Peaberry Monospace/Peaberry-Mono.otf"
+dest_files=["res://.godot/imported/Peaberry-Mono.otf-4c7c4e5978fcf45c881dd2573ab7e224.fontdata"]
 
 [params]
 
@@ -23,7 +23,6 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

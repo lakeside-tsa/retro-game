@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l3lygwu2e37q"
-path="res://.godot/imported/Beach-tilemap.png-fe25951e5fcdf130c16250a06ae20e12.ctex"
+path="res://.godot/imported/Beach-tilemap.png-18682638d2f7b5a37b4d06443b7378f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilemap/Beach-tilemap.png"
-dest_files=["res://.godot/imported/Beach-tilemap.png-fe25951e5fcdf130c16250a06ae20e12.ctex"]
+source_file="res://lastyear/Tilemap/Beach-tilemap.png"
+dest_files=["res://.godot/imported/Beach-tilemap.png-18682638d2f7b5a37b4d06443b7378f4.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://disi2xqjcpto1"
-path="res://.godot/imported/Cyan Run Vocano (Rock).mp3-2c5b1578dc538e96cf43ddacdf60612e.mp3str"
+path="res://.godot/imported/Cyan Run Vocano (Rock).mp3-f2a8f804b936d872d28c0bd6039215cc.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Cyan Run Vocano (Rock).mp3"
-dest_files=["res://.godot/imported/Cyan Run Vocano (Rock).mp3-2c5b1578dc538e96cf43ddacdf60612e.mp3str"]
+source_file="res://lastyear/sounds/Cyan Run Vocano (Rock).mp3"
+dest_files=["res://.godot/imported/Cyan Run Vocano (Rock).mp3-f2a8f804b936d872d28c0bd6039215cc.mp3str"]
 
 [params]
 

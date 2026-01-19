@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnfrv3sc6bmxb"
-path="res://.godot/imported/4.png-dac4a82c3a8b890321a1ef00853660b3.ctex"
+path="res://.godot/imported/4.png-ccd9d11b13d5adcc90792b79d6409531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ocean/Ocean_2/4.png"
-dest_files=["res://.godot/imported/4.png-dac4a82c3a8b890321a1ef00853660b3.ctex"]
+source_file="res://lastyear/Ocean/Ocean_2/4.png"
+dest_files=["res://.godot/imported/4.png-ccd9d11b13d5adcc90792b79d6409531.ctex"]
 
 [params]
 

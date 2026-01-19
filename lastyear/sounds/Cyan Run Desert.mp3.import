@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bsbbo8fwgge74"
-path="res://.godot/imported/Cyan Run Desert.mp3-6d9544bd1c2f0858280cf5eefc07554b.mp3str"
+path="res://.godot/imported/Cyan Run Desert.mp3-bc1878fe426203174e69ed72427fc2e7.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Cyan Run Desert.mp3"
-dest_files=["res://.godot/imported/Cyan Run Desert.mp3-6d9544bd1c2f0858280cf5eefc07554b.mp3str"]
+source_file="res://lastyear/sounds/Cyan Run Desert.mp3"
+dest_files=["res://.godot/imported/Cyan Run Desert.mp3-bc1878fe426203174e69ed72427fc2e7.mp3str"]
 
 [params]
 

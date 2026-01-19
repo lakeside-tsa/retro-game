@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlno1ri3wygpd"
-path="res://.godot/imported/next.svg-f15fd0aa10ad666068edbffacb144600.ctex"
+path="res://.godot/imported/next.svg-a0a3217ecba6e26b0deaec460e2a7c38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/evelyn-sprites/VisualNovelTextbox/next.svg"
-dest_files=["res://.godot/imported/next.svg-f15fd0aa10ad666068edbffacb144600.ctex"]
+source_file="res://lastyear/evelyn-sprites/VisualNovelTextbox/next.svg"
+dest_files=["res://.godot/imported/next.svg-a0a3217ecba6e26b0deaec460e2a7c38.ctex"]
 
 [params]
 

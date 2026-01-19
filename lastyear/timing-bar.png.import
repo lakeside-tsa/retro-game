@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccx8c4viomrat"
-path="res://.godot/imported/timing-bar.png-ce5fcd28f86ba03e9a0190b60f92266e.ctex"
+path="res://.godot/imported/timing-bar.png-1be358eba6b2601cc84f00b72770ea26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/timing-bar.png"
-dest_files=["res://.godot/imported/timing-bar.png-ce5fcd28f86ba03e9a0190b60f92266e.ctex"]
+source_file="res://lastyear/timing-bar.png"
+dest_files=["res://.godot/imported/timing-bar.png-1be358eba6b2601cc84f00b72770ea26.ctex"]
 
 [params]
 

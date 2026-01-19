@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxn4qycgmkfie"
-path="res://.godot/imported/jellyfish.png-d08037d64eb57dc4a6bf34a4d435e9cb.ctex"
+path="res://.godot/imported/jellyfish.png-22aae28ec2e521d299ed4e5a14bbf140.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilemap/jellyfish.png"
-dest_files=["res://.godot/imported/jellyfish.png-d08037d64eb57dc4a6bf34a4d435e9cb.ctex"]
+source_file="res://lastyear/Tilemap/jellyfish.png"
+dest_files=["res://.godot/imported/jellyfish.png-22aae28ec2e521d299ed4e5a14bbf140.ctex"]
 
 [params]
 

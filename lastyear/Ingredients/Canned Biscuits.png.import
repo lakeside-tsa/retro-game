@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8mukxe38m8ks"
-path="res://.godot/imported/Canned Biscuits.png-83f32f0057e8f44e0ff245569782fd45.ctex"
+path="res://.godot/imported/Canned Biscuits.png-34f8457bf45691370306f1ab238fb806.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ingredients/Canned Biscuits.png"
-dest_files=["res://.godot/imported/Canned Biscuits.png-83f32f0057e8f44e0ff245569782fd45.ctex"]
+source_file="res://lastyear/Ingredients/Canned Biscuits.png"
+dest_files=["res://.godot/imported/Canned Biscuits.png-34f8457bf45691370306f1ab238fb806.ctex"]
 
 [params]
 

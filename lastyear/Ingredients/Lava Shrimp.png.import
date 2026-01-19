@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vb15ak6bhkvf"
-path="res://.godot/imported/Lava Shrimp.png-ecde34d5466479f6ed8465d6d0799546.ctex"
+path="res://.godot/imported/Lava Shrimp.png-731706f91a3894edaf0c60ca0f96e91a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ingredients/Lava Shrimp.png"
-dest_files=["res://.godot/imported/Lava Shrimp.png-ecde34d5466479f6ed8465d6d0799546.ctex"]
+source_file="res://lastyear/Ingredients/Lava Shrimp.png"
+dest_files=["res://.godot/imported/Lava Shrimp.png-731706f91a3894edaf0c60ca0f96e91a.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://7we2ma1yd81n"
-path="res://.godot/imported/lv1_beach.ogg-168a09cd37059c0e497dc2a67d101450.oggvorbisstr"
+path="res://.godot/imported/lv1_beach.ogg-683647dfb098cd73ebf1b61239e3308a.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/music/lv1_beach.ogg"
-dest_files=["res://.godot/imported/lv1_beach.ogg-168a09cd37059c0e497dc2a67d101450.oggvorbisstr"]
+source_file="res://lastyear/music/lv1_beach.ogg"
+dest_files=["res://.godot/imported/lv1_beach.ogg-683647dfb098cd73ebf1b61239e3308a.oggvorbisstr"]
 
 [params]
 

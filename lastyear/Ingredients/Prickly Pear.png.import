@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdd1mssxnkldu"
-path="res://.godot/imported/Prickly Pear.png-baa26e1faf057bc174a154bf86004c04.ctex"
+path="res://.godot/imported/Prickly Pear.png-6162226b14baa3de38ced394fdf8907a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ingredients/Prickly Pear.png"
-dest_files=["res://.godot/imported/Prickly Pear.png-baa26e1faf057bc174a154bf86004c04.ctex"]
+source_file="res://lastyear/Ingredients/Prickly Pear.png"
+dest_files=["res://.godot/imported/Prickly Pear.png-6162226b14baa3de38ced394fdf8907a.ctex"]
 
 [params]
 
