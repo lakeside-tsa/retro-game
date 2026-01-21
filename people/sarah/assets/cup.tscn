@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://j8c6bjro3jxu"]
+
+[ext_resource type="Texture2D" uid="uid://dm88navuuy8k7" path="res://lastyear/Food/PPP-PF.png" id="1_775uk"]
+[ext_resource type="Script" uid="uid://csbjgiyq4qyt4" path="res://people/sarah/src/cup-path.gd" id="3_vg4mx"]
+
+[sub_resource type="Curve2D" id="Curve2D_vg4mx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2msd8"]
+radius = 96.0052
+
+[node name="Cup Path" type="Path2D"]
+curve = SubResource("Curve2D_vg4mx")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+loop = false
+script = ExtResource("3_vg4mx")
+
+[node name="Cup" type="StaticBody2D" parent="PathFollow2D"]
+
+[node name="Smoothie" type="Sprite2D" parent="PathFollow2D/Cup"]
+texture = ExtResource("1_775uk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Cup"]
+position = Vector2(5, 7)
+shape = SubResource("CircleShape2D_2msd8")
