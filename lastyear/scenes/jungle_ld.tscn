@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=4 uid="uid://voi0xotkv1mc"]
 
-[ext_resource type="Texture2D" uid="uid://dhwhwihv56mi5" path="res://assets/Tilemap/Jungle-tilemap.png" id="1_fa70s"]
-[ext_resource type="Texture2D" uid="uid://ckimdi7j0dpmp" path="res://assets/Tilemap/extra.png" id="2_ds54h"]
+[ext_resource type="Texture2D" uid="uid://dhwhwihv56mi5" path="res://lastyear/Tilemap/Jungle-tilemap.png" id="1_fa70s"]
+[ext_resource type="Texture2D" uid="uid://ckimdi7j0dpmp" path="res://lastyear/Tilemap/extra.png" id="2_ds54h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pag8y"]
 texture = ExtResource("1_fa70s")

@@ -1,48 +1,28 @@
-[gd_scene load_steps=26 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=23 format=3 uid="uid://bjmsqj0xkjmlr"]
 
-[ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://scripts/level_1.gd" id="1_kd0sr"]
-[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
-[ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://assets/Sign.png" id="2_ekjwa"]
-[ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="3_ahxml"]
-[ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
-[ext_resource type="FontFile" uid="uid://dsqwije2j027h" path="res://assets/Other/Peaberry Base/Peaberry-Base.otf" id="6_c0ed7"]
-[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
-[ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
-[ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://assets/Ingredients/Seaweed.png" id="9_2cbcq"]
-[ext_resource type="Shader" uid="uid://bt6exfb87rxjq" path="res://shaders/water.gdshader" id="9_bhve8"]
-[ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://assets/Ingredients/Crab.png" id="10_2cbcq"]
-[ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
-[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="10_x2xxo"]
-[ext_resource type="PackedScene" uid="uid://p2sk2yofect7" path="res://scenes/lv1_ing1_shape.tscn" id="11_2cbcq"]
-[ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
-[ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://scripts/whalepath.gd" id="13_salhk"]
-[ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/whale.tscn" id="14_6a2pp"]
+[ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://lastyear/scripts/level_1.gd" id="1_kd0sr"]
+[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://lastyear/scripts/ingredient_manager.gd" id="1_sy0kq"]
+[ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://lastyear/Sign.png" id="2_ekjwa"]
+[ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://lastyear/scenes/overlay.tscn" id="2_ptpf1"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://lastyear/scenes/lv1_ing1_sprite.tscn" id="3_ahxml"]
+[ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://lastyear/scenes/beach-ld.tscn" id="5_8bxnv"]
+[ext_resource type="FontFile" uid="uid://dsqwije2j027h" path="res://lastyear/Other/Peaberry Base/Peaberry-Base.otf" id="6_c0ed7"]
+[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://lastyear/scenes/cauldron.tscn" id="7_rubto"]
+[ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://lastyear/Ocean/Ocean_2/5.png" id="8_1sk5l"]
+[ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://lastyear/Ingredients/Seaweed.png" id="9_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://lastyear/Ingredients/Crab.png" id="10_2cbcq"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://lastyear/scripts/ingredient.gd" id="10_x2xxo"]
+[ext_resource type="PackedScene" uid="uid://p2sk2yofect7" path="res://lastyear/scenes/lv1_ing1_shape.tscn" id="11_2cbcq"]
+[ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://lastyear/music/lv1_beach.ogg" id="12_uje8k"]
+[ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://lastyear/scripts/whalepath.gd" id="13_salhk"]
+[ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://lastyear/scenes/whale.tscn" id="14_6a2pp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x2xxo"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
-noise_type = 2
-frequency = 0.013
-fractal_type = 2
-fractal_gain = 0.98
-fractal_weighted_strength = 0.75
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_putd4"]
-width = 128
-height = 128
-seamless = true
-seamless_blend_skirt = 0.6
-noise = SubResource("FastNoiseLite_457nn")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xah76"]
-shader = ExtResource("9_bhve8")
-shader_parameter/color = Color(1, 1, 1, 1)
-shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
-shader_parameter/speed = Vector2(0.02, 0.05)
-shader_parameter/wave_strength = 2.0
-shader_parameter/fade_start = 0.2
-shader_parameter/fade_end = 0.8
+
+[sub_resource type="Resource" id="Resource_p3kp0"]
+metadata/__load_path__ = "res://icon.svg"
 
 [sub_resource type="Curve2D" id="Curve2D_a7vwt"]
 _data = {
@@ -262,7 +242,7 @@ position = Vector2(177, 436)
 material = SubResource("ShaderMaterial_xah76")
 position = Vector2(-106.5, 1631.5)
 scale = Vector2(48.3984, 13.2891)
-texture = ExtResource("10_o8dyn")
+texture = SubResource("Resource_p3kp0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Shimmer"]
 position = Vector2(-0.371918, 1.28514)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://dg6au48p0go8r"]
 
-[ext_resource type="Script" uid="uid://bvb1xt12u5pmq" path="res://scripts/p1_oscar.gd" id="1_w03m4"]
-[ext_resource type="Texture2D" uid="uid://cjpwgau45mn7l" path="res://assets/evelyn-sprites/playeroscar.png" id="2_wcb0u"]
-[ext_resource type="AudioStream" uid="uid://ylqgbkr6o51f" path="res://assets/sounds/p1_jump.mp3" id="9_cv3x8"]
+[ext_resource type="Script" uid="uid://bvb1xt12u5pmq" path="res://lastyear/scripts/p1_oscar.gd" id="1_w03m4"]
+[ext_resource type="Texture2D" uid="uid://cjpwgau45mn7l" path="res://lastyear/evelyn-sprites/playeroscar.png" id="2_wcb0u"]
+[ext_resource type="AudioStream" uid="uid://ylqgbkr6o51f" path="res://lastyear/sounds/p1_jump.mp3" id="9_cv3x8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j5vwh"]
 atlas = ExtResource("2_wcb0u")

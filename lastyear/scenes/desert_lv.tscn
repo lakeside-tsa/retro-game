@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://cgcu58u56yahe"]
 
-[ext_resource type="Texture2D" uid="uid://cyffnk5ljkif1" path="res://assets/Tilemap/desertextra.tres" id="1_0asea"]
-[ext_resource type="Texture2D" uid="uid://c2tcuvcda58bv" path="res://assets/Tilemap/deserttiles.tres" id="1_5w16f"]
+[ext_resource type="Texture2D" uid="uid://cyffnk5ljkif1" path="res://lastyear/Tilemap/desertextra.tres" id="1_0asea"]
+[ext_resource type="Texture2D" uid="uid://c2tcuvcda58bv" path="res://lastyear/Tilemap/deserttiles.tres" id="1_5w16f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vblc1"]
 texture = ExtResource("1_0asea")

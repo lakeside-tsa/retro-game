@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://chlf4c3k7lkpu"]
 
-[ext_resource type="Script" uid="uid://b2pueq1q0iqkp" path="res://scripts/level_2.gd" id="1_n2lda"]
-[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_708p1"]
-[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="3_xfbd6"]
-[ext_resource type="PackedScene" uid="uid://voi0xotkv1mc" path="res://scenes/jungle_ld.tscn" id="6_5nbbi"]
-[ext_resource type="Texture2D" uid="uid://b1mg8rcwr4jix" path="res://assets/Ocean/nature-background.png" id="6_mhe4c"]
-[ext_resource type="PackedScene" uid="uid://j3sxutqhveur" path="res://scenes/item_generic.tscn" id="6_y0kc7"]
-[ext_resource type="Texture2D" uid="uid://cl3rt3flkx1gi" path="res://assets/Ingredients/Eggs.png" id="7_ne2mo"]
-[ext_resource type="Texture2D" uid="uid://dguboimggkeo" path="res://assets/Food/un-ing/un-rice.png" id="8_ne2mo"]
-[ext_resource type="Texture2D" uid="uid://c57vx0ccehxqy" path="res://assets/Ingredients/Pink Oyster Mushroom.png" id="9_6cvei"]
+[ext_resource type="Script" uid="uid://b2pueq1q0iqkp" path="res://lastyear/scripts/level_2.gd" id="1_n2lda"]
+[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://lastyear/scenes/cauldron.tscn" id="2_708p1"]
+[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://lastyear/scripts/ingredient_manager.gd" id="3_xfbd6"]
+[ext_resource type="PackedScene" uid="uid://voi0xotkv1mc" path="res://lastyear/scenes/jungle_ld.tscn" id="6_5nbbi"]
+[ext_resource type="Texture2D" uid="uid://b1mg8rcwr4jix" path="res://lastyear/Ocean/nature-background.png" id="6_mhe4c"]
+[ext_resource type="PackedScene" uid="uid://j3sxutqhveur" path="res://lastyear/scenes/item_generic.tscn" id="6_y0kc7"]
+[ext_resource type="Texture2D" uid="uid://cl3rt3flkx1gi" path="res://lastyear/Ingredients/Eggs.png" id="7_ne2mo"]
+[ext_resource type="Texture2D" uid="uid://dguboimggkeo" path="res://lastyear/Food/un-ing/un-rice.png" id="8_ne2mo"]
+[ext_resource type="Texture2D" uid="uid://c57vx0ccehxqy" path="res://lastyear/Ingredients/Pink Oyster Mushroom.png" id="9_6cvei"]
 
 [sub_resource type="Environment" id="Environment_6qi21"]
 background_mode = 3

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://6g6r5f0de068"]
 
-[ext_resource type="Texture2D" uid="uid://do3h6kbuaycg1" path="res://assets/Tilemap/whale.png" id="1_dqddf"]
+[ext_resource type="Texture2D" uid="uid://do3h6kbuaycg1" path="res://lastyear/Tilemap/whale.png" id="1_dqddf"]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 z_index = 6

@@ -1,115 +1,85 @@
-[gd_scene load_steps=32 format=3 uid="uid://cuvibxi7nrl5g"]
-
-[ext_resource type="Texture2D" uid="uid://c3i78gfx78rat" path="res://assets/Duck/Fall (36x36).png" id="2_7spuv"]
-[ext_resource type="Texture2D" uid="uid://dh0px6wg5hf1k" path="res://assets/Duck/Hit (36x36).png" id="3_6ks71"]
-[ext_resource type="Texture2D" uid="uid://duvrqxs6qjf2i" path="res://assets/Duck/Idle (36x36).png" id="4_ppc51"]
-[ext_resource type="Texture2D" uid="uid://dsur1jlv4dbj7" path="res://assets/Duck/Jump (36x36).png" id="5_njhw2"]
+[gd_scene load_steps=28 format=3 uid="uid://cuvibxi7nrl5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_51st5"]
-atlas = ExtResource("3_6ks71")
 region = Rect2(0, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n6414"]
-atlas = ExtResource("3_6ks71")
 region = Rect2(36, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hewxs"]
-atlas = ExtResource("3_6ks71")
 region = Rect2(72, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cprak"]
-atlas = ExtResource("3_6ks71")
 region = Rect2(108, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxg5l"]
-atlas = ExtResource("3_6ks71")
 region = Rect2(144, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7h0nh"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(0, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dhip5"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(36, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qebt5"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(72, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dc0b3"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(108, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8t1ys"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(144, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1b8tj"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(180, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ab78w"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(216, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6btj6"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(252, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2mx7"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(288, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5sf0"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(324, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hsjs0"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(0, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ey6hc"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(36, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8edq"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(72, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3cmte"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(108, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ms0tv"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(144, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qvbo0"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(180, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7md4p"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(216, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ykv8"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(252, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ri4u7"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(288, 0, 36, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ow2be"]
-atlas = ExtResource("4_ppc51")
 region = Rect2(324, 0, 36, 36)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_23xwa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7spuv")
+"texture": null
 }],
 "loop": true,
 "name": &"fall",
@@ -172,7 +142,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_njhw2")
+"texture": null
 }],
 "loop": true,
 "name": &"jump",
