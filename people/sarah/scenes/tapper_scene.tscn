@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://brid62lhl4yjo"]
+
+[ext_resource type="PackedScene" uid="uid://j8c6bjro3jxu" path="res://people/sarah/assets/cup.tscn" id="1_p4od7"]
+
+[node name="tapper-scene" type="Node2D"]
+
+[node name="Cup" parent="." instance=ExtResource("1_p4od7")]
+position = Vector2(158, 96)
+scale = Vector2(0.5, 0.5)
