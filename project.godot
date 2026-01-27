@@ -11,16 +11,15 @@ config_version=5
 [application]
 
 config/name="retro-game"
-run/main_scene="uid://j8c6bjro3jxu"
+run/main_scene="uid://btbvjbqd87rmv"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 boot_splash/stretch/scale=0.7
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Global="*res://scripts/global.gd"
-Overlay="*res://scenes/overlay.tscn"
+Global="*res://lastyear/scripts/global.gd"
+Overlay="*res://lastyear/scenes/overlay.tscn"
 
 [debug]
 

@@ -48,9 +48,9 @@ var current_score = 0
 
 func _ready():
 	var level_scene = null
-	level_scene = load("res://scenes/level_0.tscn")
+	level_scene = load("res://lastyear/scenes/level_0.tscn")
 	current_level_node = level_scene.instantiate()
-	player1 = preload("res://scenes/p3_duck.tscn").instantiate()
+	player1 = preload("res://lastyear/scenes/p3_duck.tscn").instantiate()
 	viewport1.add_child(current_level_node)
 	current_level_node.add_child(player1)
 	player1.hide()
@@ -61,7 +61,7 @@ func _ready():
 func load_level(level_number: int):
 	current_level_number = level_number
 	current_score = 0
-	var level_scene = load("res://scenes/level_" + str(level_number) + ".tscn")
+	var level_scene = load("res://lastyear/scenes/level_" + str(level_number) + ".tscn")
 
 	if current_level_node:
 		current_level_node.queue_free()
@@ -77,8 +77,8 @@ func load_level(level_number: int):
 	get_viewport().size = DisplayServer.screen_get_size()
 	viewport1.add_child(current_level_node)
 
-	player1 = preload("res://scenes/p1_oscar.tscn").instantiate()
-	player2 = preload("res://scenes/p2_abel.tscn").instantiate()
+	player1 = preload("res://lastyear/scenes/p1_oscar.tscn").instantiate()
+	player2 = preload("res://lastyear/scenes/p2_abel.tscn").instantiate()
 	current_level_node.add_child(player1)
 	current_level_node.add_child(player2)
 	player1.global_position = current_level_node.get_node("SpawnPoint1").global_position

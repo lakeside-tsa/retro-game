@@ -1,9 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://brid62lhl4yjo"]
+[gd_scene load_steps=6 format=3 uid="uid://btbvjbqd87rmv"]
 
-[ext_resource type="PackedScene" uid="uid://j8c6bjro3jxu" path="res://people/sarah/assets/cup.tscn" id="1_p4od7"]
+[ext_resource type="Script" uid="uid://dfo186m0c4wri" path="res://people/sarah/src/tapper.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dm0mrvoyoqakt" path="res://people/sarah/scenes/npc.tscn" id="2_si2lp"]
+[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://lastyear/scenes/p1_oscar.tscn" id="3_player"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tyt3m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_player"]
+radius = 100.0
 
 [node name="tapper-scene" type="Node2D"]
+script = ExtResource("1_script")
 
-[node name="Cup" parent="." instance=ExtResource("1_p4od7")]
-position = Vector2(158, 96)
-scale = Vector2(0.5, 0.5)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(250, 60)
+
+[node name="BarTop" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 120.0
+offset_top = 100.0
+offset_right = 370.0
+offset_bottom = 118.0
+color = Color(0.545, 0.353, 0.169, 1)
+
+[node name="BarFront" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 120.0
+offset_top = 118.0
+offset_right = 370.0
+offset_bottom = 130.0
+color = Color(0.396, 0.263, 0.129, 1)
+
+[node name="BarHighlight" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 120.0
+offset_top = 100.0
+offset_right = 370.0
+offset_bottom = 103.0
+color = Color(0.72, 0.53, 0.26, 1)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(400, 130)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape2D_tyt3m")
+
+[node name="p1_Oscar" parent="." instance=ExtResource("3_player")]
+position = Vector2(50, 97)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(158, 103)
+
+[node name="NPC" parent="." instance=ExtResource("2_si2lp")]
+position = Vector2(338, 93)
+scale = Vector2(0.198, 0.198)
+
+[node name="PlayerArea" type="Area2D" parent="."]
+position = Vector2(100, 96)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+shape = SubResource("CircleShape2D_player")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 200.0
+offset_bottom = 40.0
+text = "Score: 0"
+
+[node name="LivesLabel" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 80.0
+text = "Lives: 3"
+
+[connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
+[connection signal="body_exited" from="PlayerArea" to="." method="_on_player_area_body_exited"]

@@ -1,14 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce0vtmrqoktwf"]
+[gd_scene load_steps=5 format=3 uid="uid://dm0mrvoyoqakt"]
 
+[ext_resource type="Script" uid="uid://c3pkl8i1pnyhx" path="res://people/sarah/src/npc.gd" id="1_8wdms"]
 [ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://lastyear/Ingredients/Crab.png" id="1_43gov"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8wdms"]
-radius = 98.732
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wdms"]
+radius = 50.0
+height = 108.0
 
-[node name="NPC" type="Area2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wdms"]
+radius = 166.048
+
+[node name="NPC" type="CharacterBody2D"]
+collision_mask = 128
+script = ExtResource("1_8wdms")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_43gov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8wdms")
+
+[node name="Detection Area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Area"]
 shape = SubResource("CircleShape2D_8wdms")
+
+[connection signal="body_entered" from="Detection Area" to="." method="_on_body_entered"]
