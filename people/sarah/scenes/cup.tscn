@@ -18,7 +18,7 @@ curve = SubResource("Curve2D_vg4mx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 position = Vector2(-2, -2)
-rotation = 0.00166389
+rotation = 0.0016638921
 loop = false
 script = ExtResource("3_vg4mx")
 
