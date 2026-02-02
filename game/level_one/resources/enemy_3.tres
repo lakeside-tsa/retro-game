@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyConfig" load_steps=3 format=3 uid="uid://gb5rthukae7o"]
+
+[ext_resource type="Script" uid="uid://dac02r3u5k2gu" path="res://game/level_one/resources/EnemyConfig.gd" id="1_pxf0b"]
+[ext_resource type="Texture2D" uid="uid://b5qrh62ltq011" path="res://game/level_one/PLACEHOLDER ASSETS/evil3.png" id="2_llogo"]
+
+[resource]
+script = ExtResource("1_pxf0b")
+texture = ExtResource("2_llogo")
+width = 4

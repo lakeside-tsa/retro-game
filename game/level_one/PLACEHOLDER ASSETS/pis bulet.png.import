@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caj15xq4p058q"
-path="res://.godot/imported/lv1sprites.png-4cddacacb46df94efcc46e81e2ae30ae.ctex"
+uid="uid://cusmob3mtxkee"
+path="res://.godot/imported/pis bulet.png-a4475dc71b439afd1c1f9caee4b2d483.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/art/lv1sprites.png"
-dest_files=["res://.godot/imported/lv1sprites.png-4cddacacb46df94efcc46e81e2ae30ae.ctex"]
+source_file="res://game/level_one/PLACEHOLDER ASSETS/pis bulet.png"
+dest_files=["res://.godot/imported/pis bulet.png-a4475dc71b439afd1c1f9caee4b2d483.ctex"]
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

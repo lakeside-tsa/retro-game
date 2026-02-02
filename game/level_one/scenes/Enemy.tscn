@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3ookyu1g6jdg"]
+
+[ext_resource type="Script" uid="uid://7x750s67y57u" path="res://game/level_one/scripts/Enemy.gd" id="1_bmxjb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_scg3b"]
+radius = 40.16217
+
+[node name="lvl1critter111" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 32
+script = ExtResource("1_bmxjb")
+speed = null
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 34
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_scg3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_scg3b")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

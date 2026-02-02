@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ybvpycin3qa"
-path="res://.godot/imported/beach.png-f1f80df775f5f9efd6ad8d04a345fedc.ctex"
+uid="uid://clujm115fxlr7"
+path="res://.godot/imported/player placeholder.png-240087a1e634e32c6593692f87a66f4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/art/beach.png"
-dest_files=["res://.godot/imported/beach.png-f1f80df775f5f9efd6ad8d04a345fedc.ctex"]
+source_file="res://game/level_one/PLACEHOLDER ASSETS/player placeholder.png"
+dest_files=["res://.godot/imported/player placeholder.png-240087a1e634e32c6593692f87a66f4c.ctex"]
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
