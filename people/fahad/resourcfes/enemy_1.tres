@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="EnemyConfig" load_steps=3 format=3 uid="uid://bx8fsxsk3jm6v"]
-
-[ext_resource type="Script" uid="uid://dn8aek53goust" path="res://exported/resourcfes/EnemyConfig.gd" id="1_kwwu2"]
-[ext_resource type="Texture2D" uid="uid://183ganf078rm" path="res://exported/PLACEHOLDER ASSETS/evil.png" id="2_kwwu2"]
-
-[resource]
-script = ExtResource("1_kwwu2")
-texture = ExtResource("2_kwwu2")
-width = 2
