@@ -12,14 +12,15 @@ config_version=5
 
 config/name="retro-game"
 run/main_scene="uid://btbvjbqd87rmv"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 boot_splash/stretch/scale=0.7
 
 [autoload]
 
-Global="*res://lastyear/scripts/global.gd"
-Overlay="*res://lastyear/scenes/overlay.tscn"
+Global="*res://game/src/global.gd"
+Overlay="*res://game/scenes/overlay.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [debug]
 
@@ -27,41 +28,9 @@ settings/stdout/verbose_stdout=true
 
 [dialogic]
 
-directories/dch_directory={
-"abellee": "res://dialog/abellee.dch",
-"notabel": "res://dialog/notabel.dch",
-"oscarlune": "res://dialog/oscarlune.dch"
-}
-directories/dtl_directory={
-"level1": "res://dialog/level1.dtl",
-"level2": "res://dialog/level2.dtl",
-"level3": "res://dialog/level3.dtl",
-"level4": "res://dialog/level4.dtl"
-}
-extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
-text/initial_text_reveal_skippable=true
-text/text_reveal_skip_delay=0.1
-text/advance_delay=0.1
-text/autoadvance_per_character_delay=0.1
-text/autoadvance_ignored_characters_enabled=true
-choices/autofocus_first=true
-choices/delay=0.2
-choices/reveal_delay=0
-choices/reveal_by_input=false
-save/autosave_delay=60.0
-save/encryption_on_exports_only=true
-audio/max_channels=4.0
-animations/join_default_length=0.5
-animations/join_default_wait=true
-animations/leave_default_length=0.5
-animations/leave_default_wait=true
-animations/cross_fade_default_length=0.5
-text/autopauses={}
-layout/style_list=["res://dialog/visnov.tres", "res://dialog/visnov_default.tres"]
-layout/default_style="res://dialog/visnov_default.tres"
-glossary/default_case_sensitive=true
-variables={}
+directories/dch_directory={}
+directories/dtl_directory={}
+layout/style_directory={}
 
 [display]
 
@@ -70,26 +39,24 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
-"res://abel_portraits/": "purple",
 "res://assets/": "pink",
-"res://dialog/": "orange",
 "res://scenes/": "blue",
 "res://scripts/": "green"
 }
 
 [gui]
 
-theme/custom_font="res://assets/Other/Peaberry Base/Peaberry-Base.otf"
+theme/custom_font="res://game/assets/fonts/Peaberry-Base.otf"
 
 [importer_defaults]
 
 texture={
-"compress/mode": 4,
+"compress/mode": 2,
 "detect_3d/compress_to": 0
 }
 
@@ -105,12 +72,12 @@ p1_right={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
-p1_up={
+tp_up={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
-p1_down={
+tp_down={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]

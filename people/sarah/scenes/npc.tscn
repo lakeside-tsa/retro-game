@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dm0mrvoyoqakt"]
 
 [ext_resource type="Script" uid="uid://c3pkl8i1pnyhx" path="res://people/sarah/src/npc.gd" id="1_8wdms"]
-[ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://lastyear/Ingredients/Crab.png" id="1_43gov"]
+[ext_resource type="Texture2D" uid="uid://dnewcrab_png001" path="res://game/assets/art/ingredients/Crab.png" id="1_43gov"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wdms"]
 radius = 50.0

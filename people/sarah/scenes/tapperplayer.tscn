@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ddw8j1bqfygv7"]
 
 [ext_resource type="Script" uid="uid://b11veio3h762" path="res://people/sarah/src/tapperplayer.gd" id="1_hfyo4"]
-[ext_resource type="Texture2D" uid="uid://cjpwgau45mn7l" path="res://lastyear/evelyn-sprites/playeroscar.png" id="2_3jvfj"]
+[ext_resource type="Texture2D" uid="uid://dluubt6t45lev" path="res://game/assets/art/playeroscar.png" id="2_3jvfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ogw2h"]
 atlas = ExtResource("2_3jvfj")

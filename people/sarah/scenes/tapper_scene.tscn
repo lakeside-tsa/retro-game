@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfo186m0c4wri" path="res://people/sarah/src/tapper.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://dm0mrvoyoqakt" path="res://people/sarah/scenes/npc.tscn" id="2_si2lp"]
-[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://lastyear/scenes/p1_oscar.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://dxnew_p1oscar1" path="res://game/scenes/p1_oscar.tscn" id="3_player"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tyt3m"]
 

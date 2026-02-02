@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byq5nintsojw5"
-path="res://.godot/imported/pixil-frame-0.png-4b36ec549bafe7ee3a9280e6788b5ada.ctex"
+uid="uid://bf06w4fmc6vgb"
+path="res://.godot/imported/Crab.png-49c659d4916ffacee72725df01c6bcd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://people/fahad/PLACEHOLDER ASSETS/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-4b36ec549bafe7ee3a9280e6788b5ada.ctex"]
+source_file="res://game/assets/art/ingredients/Crab.png"
+dest_files=["res://.godot/imported/Crab.png-49c659d4916ffacee72725df01c6bcd8.ctex"]
 
 [params]
 
