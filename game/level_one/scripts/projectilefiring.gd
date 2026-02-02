@@ -2,7 +2,7 @@ extends Node2D
 
 @export var laser_scene: PackedScene
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("shoot"):
 		var laser = laser_scene.instantiate() as Laser
 		laser.global_position = get_parent().global_position - Vector2(0,20)
