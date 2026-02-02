@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://183ganf078rm"
-path="res://.godot/imported/evil.png-4266fab593e8762513321b6a7b5f29c4.ctex"
+path="res://.godot/imported/evil.png-5c009307f94228803228eab7d575abaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://people/fahad/PLACEHOLDER ASSETS/evil.png"
-dest_files=["res://.godot/imported/evil.png-4266fab593e8762513321b6a7b5f29c4.ctex"]
+source_file="res://exported/PLACEHOLDER ASSETS/evil.png"
+dest_files=["res://.godot/imported/evil.png-5c009307f94228803228eab7d575abaf.ctex"]
 
 [params]
 

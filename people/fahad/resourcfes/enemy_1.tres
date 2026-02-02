@@ -1,11 +1,9 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bx8fsxsk3jm6v"]
+[gd_resource type="Resource" script_class="EnemyConfig" load_steps=3 format=3 uid="uid://bx8fsxsk3jm6v"]
 
 [ext_resource type="Script" uid="uid://dn8aek53goust" path="res://exported/resourcfes/EnemyConfig.gd" id="1_kwwu2"]
-[ext_resource type="Texture2D" uid="uid://5rfol7xymexy" path="res://Assets/evil.png" id="2_jnt7p"]
+[ext_resource type="Texture2D" uid="uid://183ganf078rm" path="res://exported/PLACEHOLDER ASSETS/evil.png" id="2_kwwu2"]
 
 [resource]
 script = ExtResource("1_kwwu2")
-sprite = ExtResource("2_jnt7p")
+texture = ExtResource("2_kwwu2")
 width = 2
-points = 40
-speed = 100

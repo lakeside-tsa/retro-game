@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byq5nintsojw5"
-path="res://.godot/imported/pixil-frame-0.png-fc011a64dd0d6b08eea757bd7864916d.ctex"
+uid="uid://nefwhd8rvdkm"
+path="res://.godot/imported/evil3.png-049b5102fd37ed6fa642be0ee111fd17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exported/PLACEHOLDER ASSETS/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-fc011a64dd0d6b08eea757bd7864916d.ctex"]
+source_file="res://exported/PLACEHOLDER ASSETS/evil3.png"
+dest_files=["res://.godot/imported/evil3.png-049b5102fd37ed6fa642be0ee111fd17.ctex"]
 
 [params]
 
