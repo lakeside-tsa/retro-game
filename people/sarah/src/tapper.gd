@@ -26,6 +26,15 @@ func _on_npc_reached_player():
 		_on_game_over()
 
 func _process(_delta):
+	if Input.is_action_just_pressed("tp_action"):
+		print("Space pressed")
+	if player_near:
+		print("Player near")
+
+	if player_near and Input.is_action_just_pressed("tp_action") and can_spawn:
+		print("Trying to spawn cup")
+		spawn_cup()
+
 	if not game_active:
 		return
 
@@ -35,7 +44,7 @@ func _process(_delta):
 		_on_win()
 		return
 
-	if player_near and Input.is_action_just_pressed("p1_action") and can_spawn:
+	if player_near and Input.is_action_just_pressed("tp_action") and can_spawn:
 		spawn_cup()
 
 func spawn_cup():
@@ -66,9 +75,9 @@ func _on_game_over():
 	lives_label.text = "Lives: 0"
 
 func _on_player_area_body_entered(body):
-	if body.name.begins_with("p1_"):
+	if body.name == "tapperplayer":
 		player_near = true
 
 func _on_player_area_body_exited(body):
-	if body.name.begins_with("p1_"):
+	if body.name == "tapperplayer":
 		player_near = false

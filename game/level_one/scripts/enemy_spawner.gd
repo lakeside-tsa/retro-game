@@ -8,12 +8,12 @@ const VERTICAL_SPACING = 80
 const ENEMY_HEIGHT = 24
 const START_Y_POSITION = -300
 
-var enemy_scene = preload("res://exported/scenes/Enemy.tscn")
+var enemy_scene = preload("res://game/level_one/scenes/Enemy.tscn")
 
 func _ready():
-	var enemy_1_res = preload("res://exported/resourcfes/enemy_1.tres")
-	var enemy_2_res = preload("res://exported/resourcfes/enemy_2.tres")
-	var enemy_3_res = preload("res://exported/resourcfes/enemy_3.tres")
+	var enemy_1_res = preload("res://game/level_one/resources/enemy_1.tres")
+	var enemy_2_res = preload("res://game/level_one/resources/enemy_2.tres")
+	var enemy_3_res = preload("res://game/level_one/resources/enemy_3.tres")
 
 	for row in range(ROWS):
 		var config_to_use

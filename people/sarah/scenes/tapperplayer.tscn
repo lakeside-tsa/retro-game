@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxolh"]
 size = Vector2(10, 28)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="tapperplayer" type="CharacterBody2D"]
 script = ExtResource("1_hfyo4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

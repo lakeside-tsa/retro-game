@@ -1,13 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://btbvjbqd87rmv"]
+[gd_scene load_steps=5 format=3 uid="uid://btbvjbqd87rmv"]
 
 [ext_resource type="Script" uid="uid://dfo186m0c4wri" path="res://people/sarah/src/tapper.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://dm0mrvoyoqakt" path="res://people/sarah/scenes/npc.tscn" id="2_si2lp"]
-[ext_resource type="PackedScene" uid="uid://dxnew_p1oscar1" path="res://game/scenes/p1_oscar.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://ddw8j1bqfygv7" path="res://people/sarah/scenes/tapperplayer.tscn" id="2_tyr23"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tyt3m"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_player"]
-radius = 100.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyr23"]
+size = Vector2(61, 95)
 
 [node name="tapper-scene" type="Node2D"]
 script = ExtResource("1_script")
@@ -15,42 +13,28 @@ script = ExtResource("1_script")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(250, 60)
 
-[node name="BarTop" type="ColorRect" parent="."]
+[node name="tapperplayer" parent="." instance=ExtResource("2_tyr23")]
+position = Vector2(110.000015, 81)
+scale = Vector2(3, 3)
+
+[node name="Bar Counter" type="Node2D" parent="."]
+position = Vector2(120, 100)
+
+[node name="BarTop" type="ColorRect" parent="Bar Counter"]
 z_index = -1
-offset_left = 120.0
-offset_top = 100.0
-offset_right = 370.0
-offset_bottom = 118.0
+offset_right = 250.0
+offset_bottom = 18.0
 color = Color(0.545, 0.353, 0.169, 1)
 
-[node name="BarFront" type="ColorRect" parent="."]
+[node name="BarFront" type="ColorRect" parent="Bar Counter"]
 z_index = -1
-offset_left = 120.0
-offset_top = 118.0
-offset_right = 370.0
-offset_bottom = 130.0
+offset_top = 18.0
+offset_right = 250.0
+offset_bottom = 30.0
 color = Color(0.396, 0.263, 0.129, 1)
 
-[node name="BarHighlight" type="ColorRect" parent="."]
-z_index = -1
-offset_left = 120.0
-offset_top = 100.0
-offset_right = 370.0
-offset_bottom = 103.0
-color = Color(0.72, 0.53, 0.26, 1)
-
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(400, 130)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-shape = SubResource("WorldBoundaryShape2D_tyt3m")
-
-[node name="p1_Oscar" parent="." instance=ExtResource("3_player")]
-position = Vector2(50, 97)
-
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(158, 103)
+position = Vector2(161, 99)
 
 [node name="NPC" parent="." instance=ExtResource("2_si2lp")]
 position = Vector2(338, 93)
@@ -62,7 +46,8 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
-shape = SubResource("CircleShape2D_player")
+position = Vector2(-4.5, -11.5)
+shape = SubResource("RectangleShape2D_tyr23")
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_right = 200.0

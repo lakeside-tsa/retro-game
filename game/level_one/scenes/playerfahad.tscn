@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://dt1vs81b5xaa0" path="res://game/level_one/scripts/playerfahad.gd" id="1_4ahgq"]
 [ext_resource type="Script" uid="uid://barlp2lenicgn" path="res://game/level_one/scripts/projectilefiring.gd" id="2_o3h3d"]
 [ext_resource type="PackedScene" uid="uid://of6paxgn6yfp" path="res://game/level_one/scenes/p1_Projectile.tscn" id="3_2p1qy"]
-
-[sub_resource type="Resource" id="Resource_1ymxe"]
-metadata/__load_path__ = "res://Assets/player placeholder.png"
+[ext_resource type="Texture2D" uid="uid://clujm115fxlr7" path="res://game/level_one/PLACEHOLDER ASSETS/player placeholder.png" id="4_player_tex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_naqj3"]
 size = Vector2(18, 16)
@@ -14,7 +12,7 @@ size = Vector2(18, 16)
 script = ExtResource("1_4ahgq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("Resource_1ymxe")
+texture = ExtResource("4_player_tex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
