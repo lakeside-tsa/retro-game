@@ -43,6 +43,7 @@ animations = [{
 size = Vector2(10, 28)
 
 [node name="tapperplayer" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_hfyo4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
