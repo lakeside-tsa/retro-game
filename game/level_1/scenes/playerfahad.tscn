@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://game/level_1/scripts/playerfahad.gd" id="1_p2p1x"]
+[ext_resource type="Texture2D" path="res://game/level_1/placeholder_assets/player_placeholder.png" id="2_pptdq"]
+[ext_resource type="Script" path="res://game/level_1/scripts/projectilefiring.gd" id="3_k72vb"]
+[ext_resource type="PackedScene" path="res://game/level_1/scenes/p1_Projectile.tscn" id="4_cymho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naqj3"]
+size = Vector2(18, 16)
+
+[node name="Playerfahad" type="CharacterBody2D"]
+script = ExtResource("1_p2p1x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pptdq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_naqj3")
+
+[node name="shotorigin" type="Node2D" parent="."]
+position = Vector2(0, -38)
+script = ExtResource("3_k72vb")
+laser_scene = ExtResource("4_cymho")

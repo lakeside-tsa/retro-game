@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dndyhqudkc33x"]
+
+[ext_resource type="PackedScene" path="res://game/level_1/scenes/playerfahad.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://game/level_1/scenes/projectile_catcher.tscn" id="2_catcher"]
+[ext_resource type="PackedScene" path="res://game/level_1/scenes/enemy_spawner.tscn" id="3_spawner"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(1151, 19)
+
+[node name="level_1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -600.0
+offset_top = -400.0
+offset_right = 600.0
+offset_bottom = 400.0
+color = Color(0.05, 0.05, 0.15, 1)
+
+[node name="Playerfahad" parent="." instance=ExtResource("1_player")]
+position = Vector2(0, 250)
+
+[node name="ProjectileCatcher" parent="." instance=ExtResource("2_catcher")]
+position = Vector2(0, -350)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_spawner")]
+position = Vector2(0, -100)
+
+[node name="BottomWall" type="Area2D" parent="."]
+position = Vector2(0, 320)
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
+shape = SubResource("RectangleShape2D_wall")

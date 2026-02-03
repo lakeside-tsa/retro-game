@@ -1,25 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://c23wqfgoh1csy"]
+[gd_scene load_steps=2 format=3 uid="uid://c23wqfgoh1csy"]
 
-[ext_resource type="Texture2D" uid="uid://caj15xq4p058q" path="res://game/level_one/assets/lv1sprites.png" id="1_mcwjr"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h0ney"]
-distance = -86.19995
+[ext_resource type="Script" path="res://game/hub/hub.gd" id="1_hub"]
 
 [node name="Hub" type="Node2D"]
+script = ExtResource("1_hub")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.02, 0.02)
 
-[node name="Floor" type="Area2D" parent="."]
-position = Vector2(-35, 14514)
-scale = Vector2(20, 20)
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.15, 0.2, 0.3, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-shape = SubResource("WorldBoundaryShape2D_h0ney")
+[node name="Title" type="Label" parent="."]
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = -150.0
+theme_override_font_sizes/font_size = 36
+text = "HUB"
+horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3104, 12638)
-scale = Vector2(89, 72)
-texture = ExtResource("1_mcwjr")
-region_enabled = true
-region_rect = Rect2(2.613594, 78.29691, 73.603714, 100.94224)
+[node name="Instructions" type="Label" parent="."]
+offset_left = -300.0
+offset_top = -50.0
+offset_right = 300.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 20
+text = "Press 1 - Space Invaders
+Press 2 - Tapper
+Press 3 - DDR"
+horizontal_alignment = 1
