@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c23wqfgoh1csy"]
+
+[ext_resource type="Texture2D" uid="uid://caj15xq4p058q" path="res://game/level_one/assets/lv1sprites.png" id="1_mcwjr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h0ney"]
+distance = -86.19995
+
+[node name="Hub" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.02, 0.02)
+
+[node name="Floor" type="Area2D" parent="."]
+position = Vector2(-35, 14514)
+scale = Vector2(20, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape2D_h0ney")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3104, 12638)
+scale = Vector2(89, 72)
+texture = ExtResource("1_mcwjr")
+region_enabled = true
+region_rect = Rect2(2.613594, 78.29691, 73.603714, 100.94224)
