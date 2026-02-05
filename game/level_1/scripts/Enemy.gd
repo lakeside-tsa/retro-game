@@ -40,3 +40,11 @@ func _on_hitbox_area_entered(area):
 		area.queue_free()
 		if health <= 0:
 			queue_free()
+		else:
+			flash_hit()
+
+func flash_hit():
+	sprite_2d.modulate = Color.WHITE * 2
+
+	var tween = create_tween()
+	tween.tween_property(sprite_2d, "modulate", Color.WHITE, 0.15)
