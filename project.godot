@@ -28,17 +28,8 @@ settings/stdout/verbose_stdout=true
 
 [dialogic]
 
-directories/dch_directory={
-"abellee": "res://tmp-gitrepos/pacific-potluck/dialog/abellee.dch",
-"notabel": "res://tmp-gitrepos/pacific-potluck/dialog/notabel.dch",
-"oscarlune": "res://tmp-gitrepos/pacific-potluck/dialog/oscarlune.dch"
-}
-directories/dtl_directory={
-"level1": "res://tmp-gitrepos/pacific-potluck/dialog/level1.dtl",
-"level2": "res://tmp-gitrepos/pacific-potluck/dialog/level2.dtl",
-"level3": "res://tmp-gitrepos/pacific-potluck/dialog/level3.dtl",
-"level4": "res://tmp-gitrepos/pacific-potluck/dialog/level4.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={}
 
 [display]
