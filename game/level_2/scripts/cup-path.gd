@@ -15,5 +15,10 @@ func _physics_process(delta):
 	if progress_ratio >= 1.0:
 		has_reached_end = true
 		cup_missed.emit()
-		await get_tree().create_timer(1).timeout
 		get_parent().queue_free()
+
+func collect():
+	has_reached_end = true
+	set_physics_process(false)
+	get_parent().visible = false
+	get_parent().queue_free()

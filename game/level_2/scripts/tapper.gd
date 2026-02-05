@@ -5,6 +5,7 @@ signal level_completed
 @onready var score_label = $ScoreLabel
 @onready var lives_label = $LivesLabel
 @onready var spawn_point = $SpawnPoint
+@onready var player = $tapperplayer
 
 var cup_scene = preload("res://game/level_2/scenes/cup.tscn")
 var player_near = false
@@ -26,13 +27,7 @@ func _on_npc_reached_player():
 		_on_game_over()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("tp_action"):
-		print("Space pressed")
-	if player_near:
-		print("Player near")
-
 	if player_near and Input.is_action_just_pressed("tp_action") and can_spawn:
-		print("Trying to spawn cup")
 		spawn_cup()
 
 	if not game_active:
@@ -44,14 +39,11 @@ func _process(_delta):
 		_on_win()
 		return
 
-	if player_near and Input.is_action_just_pressed("tp_action") and can_spawn:
-		spawn_cup()
-
 func spawn_cup():
 	var cup = cup_scene.instantiate()
+	cup.position = Vector2(player.position.x + 30, player.position.y)
+	cup.scale = Vector2(0.3, 0.3)
 	add_child(cup)
-	cup.position = spawn_point.position
-	cup.scale = Vector2(0.1, 0.1)
 	cup.get_node("PathFollow2D").cup_missed.connect(_on_cup_missed)
 
 	can_spawn = false
@@ -81,3 +73,4 @@ func _on_player_area_body_entered(body):
 func _on_player_area_body_exited(body):
 	if body.name == "tapperplayer":
 		player_near = false
+ 

@@ -17,8 +17,8 @@ func _physics_process(_delta):
 func reset_position():
 	position = start_position
 
-func _on_body_entered(body):
+func _on_area_entered(area):
+	var path_follow = area.get_parent()
 	Global.score += 1
-	print("Cup caught! Score: ", Global.score)
-	body.get_parent().get_parent().queue_free()
+	path_follow.collect()
 	reset_position()
