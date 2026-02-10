@@ -3,8 +3,8 @@ class_name EnemySpawner
 
 const ROWS = 3
 const COLUMNS = 11
-const HORIZONTAL_SPACING = 80
-const VERTICAL_SPACING = 80
+const HORIZONTAL_SPACING = 20
+const VERTICAL_SPACING = 20
 const ENEMY_HEIGHT = 24
 const START_Y_POSITION = -300
 
