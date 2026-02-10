@@ -1,26 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://dndyhqudkc33x"]
+[gd_scene load_steps=7 format=3 uid="uid://dndyhqudkc33x"]
 
-[ext_resource type="PackedScene" path="res://game/level_1/scenes/playerfahad.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://f6rkpd4lc6lx" path="res://game/level_1/scenes/playerfahad.tscn" id="1_player"]
 [ext_resource type="PackedScene" path="res://game/level_1/scenes/projectile_catcher.tscn" id="2_catcher"]
 [ext_resource type="PackedScene" path="res://game/level_1/scenes/enemy_spawner.tscn" id="3_spawner"]
+[ext_resource type="Texture2D" uid="uid://bl81ro74q4jve" path="res://game/level_1/assets/beach.png" id="4_yxj0r"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
-size = Vector2(1151, 19)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxj0r"]
+size = Vector2(20, 700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn3sq"]
+size = Vector2(20, 700)
 
 [node name="level_1" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Background" type="ColorRect" parent="."]
-z_index = -10
-offset_left = -600.0
-offset_top = -400.0
-offset_right = 600.0
-offset_bottom = 400.0
-color = Color(0.05, 0.05, 0.15, 1)
+offset_left = -594.0
+offset_top = -351.0
+offset_right = 585.0
+offset_bottom = 345.0
+color = Color(0, 0, 0, 1)
+
+[node name="Beach" type="Sprite2D" parent="."]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_yxj0r")
 
 [node name="Playerfahad" parent="." instance=ExtResource("1_player")]
 position = Vector2(0, 250)
+scale = Vector2(1.8, 1.8)
 
 [node name="ProjectileCatcher" parent="." instance=ExtResource("2_catcher")]
 position = Vector2(0, -350)
@@ -28,10 +36,16 @@ position = Vector2(0, -350)
 [node name="EnemySpawner" parent="." instance=ExtResource("3_spawner")]
 position = Vector2(0, -100)
 
-[node name="BottomWall" type="Area2D" parent="."]
-position = Vector2(0, 320)
-collision_layer = 32
-collision_mask = 4
+[node name="Left Boundary" type="StaticBody2D" parent="."]
+position = Vector2(-604, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
-shape = SubResource("RectangleShape2D_wall")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Boundary"]
+position = Vector2(364, -7)
+shape = SubResource("RectangleShape2D_yxj0r")
+
+[node name="Right Boundary" type="StaticBody2D" parent="."]
+position = Vector2(595, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Boundary"]
+position = Vector2(-354, 11)
+shape = SubResource("RectangleShape2D_nn3sq")
