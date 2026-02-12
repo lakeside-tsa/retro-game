@@ -30,7 +30,7 @@ func apply_config():
 	speed = _config.speed
 	health = _config.health
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = speed * movement_direction
 	move_and_slide()
 
@@ -44,7 +44,7 @@ func _on_hitbox_area_entered(area):
 			flash_hit()
 
 func flash_hit():
-	sprite_2d.modulate = Color.WHITE * 2
+	sprite_2d.modulate = Color.GREEN_YELLOW * 2
 
 	var tween = create_tween()
-	tween.tween_property(sprite_2d, "modulate", Color.WHITE, 0.15)
+	tween.tween_property(sprite_2d, "modulate", Color.GREEN_YELLOW, 0.15)
