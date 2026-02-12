@@ -19,6 +19,7 @@ func _ready():
 	score_label.text = "Score: 0"
 	lives_label.text = "Lives: 3"
 	$NPC.reached_player.connect(_on_npc_reached_player)
+	$NPC.cup_collected.connect(_on_cup_collected)
 
 func _on_npc_reached_player():
 	lives -= 1
@@ -49,6 +50,38 @@ func spawn_cup():
 	can_spawn = false
 	await get_tree().create_timer(0.5).timeout
 	can_spawn = true
+
+func _on_cup_collected(progress: float, cup_y: float):
+	spawn_empty_cup(progress, cup_y)
+
+func spawn_empty_cup(start_progress: float, cup_y: float):
+	var cup = cup_scene.instantiate()
+	cup.position = Vector2(player.position.x + 30, cup_y)
+	cup.scale = Vector2(0.3, 0.3)
+	add_child(cup)
+
+	var path_follow = cup.get_node("PathFollow2D")
+	path_follow.progress_ratio = start_progress
+	path_follow.direction = -1
+
+	# Visual change to indicate empty cup
+	var sprite = path_follow.get_node("Cup/Smoothie")
+	sprite.modulate = Color(0.5, 0.5, 0.7, 0.8)
+
+	# Different collision layer so NPC ignores it
+	var cup_area = path_follow.get_node("Cup")
+	cup_area.collision_layer = 256
+
+	path_follow.cup_returned.connect(_on_empty_cup_returned)
+
+func _on_empty_cup_returned():
+	if player_near:
+		pass # Player caught the empty cup
+	else:
+		lives -= 1
+		lives_label.text = "Lives: " + str(lives)
+		if lives <= 0:
+			_on_game_over()
 
 func _on_cup_missed():
 	lives -= 1

@@ -1,6 +1,7 @@
 extends PathFollow2D
 
 signal cup_missed
+signal cup_returned
 
 var speed = 0.25
 var direction = 1
@@ -15,6 +16,10 @@ func _physics_process(delta):
 	if progress_ratio >= 1.0:
 		has_reached_end = true
 		cup_missed.emit()
+		get_parent().queue_free()
+	elif progress_ratio <= 0.0:
+		has_reached_end = true
+		cup_returned.emit()
 		get_parent().queue_free()
 
 func collect():
