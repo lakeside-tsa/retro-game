@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cy8yl1yu2o8n2"]
 
-[ext_resource type="Script" path="res://game/level_1/scripts/projectile_catcher.gd" id="1_juwiq"]
+[ext_resource type="Script" uid="uid://bwmlq6rg2airm" path="res://game/level_1/scripts/projectile_catcher.gd" id="1_juwiq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82pn1"]
 size = Vector2(1153, 49.5)

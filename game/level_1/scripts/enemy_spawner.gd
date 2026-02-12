@@ -2,8 +2,9 @@ extends Node2D
 class_name EnemySpawner
 
 const ROWS = 3
-const COLUMNS = 11
+const COLUMNS = 10
 const HORIZONTAL_SPACING = 20
+const ROW_HORIZONTAL_SPACING = { 0: 30, 1: 35 }
 const VERTICAL_SPACING = 20
 const ENEMY_HEIGHT = 24
 const START_Y_POSITION = -300
@@ -26,13 +27,15 @@ func _ready():
 			2:
 				config_to_use = enemy_3_res
 
+		var h_spacing = ROW_HORIZONTAL_SPACING.get(row, HORIZONTAL_SPACING)
+
 		var row_width = (COLUMNS * config_to_use.width * 3) \
-			+ ((COLUMNS - 1) * HORIZONTAL_SPACING)
+			+ ((COLUMNS - 1) * h_spacing)
 
 		var start_x = position.x - row_width / 2
 
 		for col in range(COLUMNS):
-			var x = start_x + (col * config_to_use.width * 3) + (col * HORIZONTAL_SPACING)
+			var x = start_x + (col * config_to_use.width * 3) + (col * h_spacing)
 			var y = START_Y_POSITION + (row * ENEMY_HEIGHT) + (row * VERTICAL_SPACING)
 
 			spawn_enemy(config_to_use, Vector2(x, y))
