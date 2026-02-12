@@ -4,19 +4,14 @@ signal reached_player
 signal cup_collected(progress: float, cup_y: float)
 
 var speed: float = 30.0
-var start_position: Vector2
-
-func _ready():
-	start_position = position
+var score_value: int = 1
+var lane_index: int = 0
 
 func _physics_process(_delta):
 	position.x -= speed * _delta
 	if position.x <= 120:
 		reached_player.emit()
-		reset_position()
-
-func reset_position():
-	position = start_position
+		queue_free()
 
 func _on_area_entered(area):
 	var path_follow = area.get_parent()
@@ -24,7 +19,7 @@ func _on_area_entered(area):
 		return
 	var progress = path_follow.progress_ratio
 	var cup_y = path_follow.get_parent().position.y
-	Global.score += 1
+	Global.score += score_value
 	path_follow.collect()
 	cup_collected.emit(progress, cup_y)
-	reset_position()
+	queue_free()

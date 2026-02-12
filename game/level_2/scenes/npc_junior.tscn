@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" uid="uid://mjppvv18fo5q" path="res://game/level_2/scripts/npc.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bf06w4fmc6vgb" path="res://game/assets/art/ingredients/Crab.png" id="2_texture"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_texture")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
+radius = 50.0
+height = 108.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_detect"]
+radius = 40.0
+
+[node name="NPC" type="CharacterBody2D"]
+collision_mask = 128
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"default"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_body")
+
+[node name="Detection Area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Area"]
+shape = SubResource("CircleShape2D_detect")
+
+[connection signal="area_entered" from="Detection Area" to="." method="_on_area_entered"]

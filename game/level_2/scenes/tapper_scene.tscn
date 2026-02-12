@@ -1,52 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://tapper_scene_001"]
+[gd_scene load_steps=4 format=3 uid="uid://3wnsjd4ab5gm"]
 
-[ext_resource type="Script" path="res://game/level_2/scripts/tapper.gd" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://tapper_npc_001" path="res://game/level_2/scenes/npc.tscn" id="2_si2lp"]
-[ext_resource type="PackedScene" uid="uid://tapper_player_001" path="res://game/level_2/scenes/tapperplayer.tscn" id="2_tyr23"]
+[ext_resource type="Script" uid="uid://bn6xydblbi83g" path="res://game/level_2/scripts/tapper.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://game/level_2/scenes/tapperplayer.tscn" id="2_tyr23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyr23"]
-size = Vector2(61, 95)
+size = Vector2(61, 220)
 
 [node name="tapper-scene" type="Node2D"]
 script = ExtResource("1_script")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(250, 60)
+position = Vector2(250, 90)
 
 [node name="tapperplayer" parent="." instance=ExtResource("2_tyr23")]
-position = Vector2(110.000015, 81)
+position = Vector2(110, 81)
 scale = Vector2(3, 3)
-
-[node name="Bar Counter" type="Node2D" parent="."]
-position = Vector2(120, 100)
-
-[node name="BarTop" type="ColorRect" parent="Bar Counter"]
-z_index = -1
-offset_right = 250.0
-offset_bottom = 18.0
-color = Color(0.545, 0.353, 0.169, 1)
-
-[node name="BarFront" type="ColorRect" parent="Bar Counter"]
-z_index = -1
-offset_top = 18.0
-offset_right = 250.0
-offset_bottom = 30.0
-color = Color(0.396, 0.263, 0.129, 1)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(161, 99)
 
-[node name="NPC" parent="." instance=ExtResource("2_si2lp")]
-position = Vector2(338, 93)
-scale = Vector2(0.198, 0.198)
-
 [node name="PlayerArea" type="Area2D" parent="."]
-position = Vector2(100, 96)
+position = Vector2(100, 95)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
-position = Vector2(-4.5, -11.5)
 shape = SubResource("RectangleShape2D_tyr23")
 
 [node name="ScoreLabel" type="Label" parent="."]
