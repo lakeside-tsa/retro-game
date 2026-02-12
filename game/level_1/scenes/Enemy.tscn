@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" path="res://game/level_1/placeholder_assets/evil.png" id="2_v22xl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scg3b"]
-radius = 40.16217
+radius = 20.0
 
 [node name="lvl1critter111" type="CharacterBody2D"]
 scale = Vector2(2, 2)
