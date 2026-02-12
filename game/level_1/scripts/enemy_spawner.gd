@@ -39,6 +39,6 @@ func _ready():
 
 func spawn_enemy(config_to_use, spawn_position: Vector2):
 	var enemy = enemy_scene.instantiate()
-	add_child(enemy) # important: must add before setting config
+	add_child(enemy)
 	enemy.global_position = spawn_position
 	enemy.config = config_to_use

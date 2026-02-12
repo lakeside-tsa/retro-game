@@ -14,11 +14,9 @@ var can_spawn: bool = true
 var game_active: bool = true
 var win_target: int = 10000
 
-# Lane system
 var lane_bar_y = [20, 70, 120, 170]
 var lane_npcs: Array = [null, null, null, null]
 
-# NPC types: [scene, score_value]
 var npc_types = [
 	[preload("res://game/level_2/scenes/npc_junior.tscn"), 75],
 	[preload("res://game/level_2/scenes/npc_detective.tscn"), 150],
@@ -30,7 +28,6 @@ func _ready():
 	score_label.text = "Score: 0"
 	lives_label.text = "Lives: 3"
 
-	# Create bar counters for each lane
 	for bar_y in lane_bar_y:
 		var bar_top = ColorRect.new()
 		bar_top.z_index = -1
@@ -46,7 +43,6 @@ func _ready():
 		bar_front.color = Color(0.396, 0.263, 0.129, 1)
 		add_child(bar_front)
 
-	# Set up player lane positions
 	var player_positions = []
 	for bar_y in lane_bar_y:
 		player_positions.append(bar_y - 19)
@@ -54,7 +50,6 @@ func _ready():
 	player.current_lane = 2
 	player.position.y = player_positions[2]
 
-	# Start NPC spawn timer
 	var spawn_timer = Timer.new()
 	spawn_timer.wait_time = 2.0
 	spawn_timer.autostart = true
@@ -64,14 +59,12 @@ func _ready():
 func _on_spawn_timer():
 	if not game_active:
 		return
-	# Find empty lanes
 	var empty_lanes = []
 	for i in lane_npcs.size():
 		if lane_npcs[i] == null:
 			empty_lanes.append(i)
 	if empty_lanes.is_empty():
 		return
-	# Pick random empty lane
 	var lane = empty_lanes[randi() % empty_lanes.size()]
 	spawn_npc(lane)
 
@@ -144,11 +137,9 @@ func spawn_empty_cup(start_progress: float, cup_y: float):
 	path_follow.direction = -1
 	path_follow.speed = path_follow.speed * 0.5
 
-	# Visual change to indicate empty cup
 	var sprite = path_follow.get_node("Cup/Smoothie")
 	sprite.modulate = Color(0.5, 0.5, 0.7, 0.8)
 
-	# Different collision layer so NPC ignores it
 	var cup_area = path_follow.get_node("Cup")
 	cup_area.collision_layer = 256
 
@@ -156,7 +147,7 @@ func spawn_empty_cup(start_progress: float, cup_y: float):
 
 func _on_empty_cup_returned(cup_y: float):
 	if player_near and player.position.y == cup_y:
-		pass # Player caught the empty cup on the correct lane
+		pass
 	else:
 		lives -= 1
 		lives_label.text = "Lives: " + str(lives)
