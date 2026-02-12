@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://title_screen_001"]
+[gd_scene load_steps=2 format=3 uid="uid://ccyrjaxw7ev4j"]
 
-[ext_resource type="Script" path="res://game/src/title_screen.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://6we0teyq4k2m" path="res://game/src/title_screen.gd" id="1_script"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_script")
@@ -18,7 +18,7 @@ offset_top = -100.0
 offset_right = 300.0
 offset_bottom = -20.0
 theme_override_font_sizes/font_size = 48
-text = "GAME TITLE"
+text = "HIGHSCORE HIJINKS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
