@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://clav4f8e46q0u"]
 
-[ext_resource type="Script" path="res://game/level_1/scripts/Enemy.gd" id="1_q5jki"]
-[ext_resource type="Texture2D" path="res://game/level_1/placeholder_assets/evil.png" id="2_v22xl"]
+[ext_resource type="Script" uid="uid://36ycdwwp7xu6" path="res://game/level_1/scripts/Enemy.gd" id="1_q5jki"]
+[ext_resource type="Texture2D" uid="uid://cto41wc0smve5" path="res://game/level_1/placeholder_assets/evil.png" id="2_v22xl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scg3b"]
 radius = 20.0
