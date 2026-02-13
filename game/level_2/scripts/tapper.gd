@@ -16,6 +16,8 @@ var win_target: int = 10000
 
 var lane_bar_y = [-80, 25, 140, 270]
 var lane_npc_y = [-87, -7, 90, 185]
+var lane_player_x = [170, 185, 215, 250]
+var lane_npc_spawn_x = [-150, -200, -250, -300]
 var lane_npcs: Array = [null, null, null, null]
 
 var npc_types = [
@@ -29,15 +31,13 @@ func _ready():
 	score_label.text = "Score: 0"
 	lives_label.text = "Lives: 3"
 
-	var player_positions = []
-	for bar_y in lane_bar_y:
-		player_positions.append(bar_y - 19)
-	player.lane_positions = player_positions
+	player.lane_positions_y = lane_npc_y.duplicate()
+	player.lane_positions_x = lane_player_x.duplicate()
 	player.current_lane = 2
-	player.position.y = player_positions[2]
+	player.position = Vector2(lane_player_x[2], lane_npc_y[2])
 
 	var spawn_timer = Timer.new()
-	spawn_timer.wait_time = 2.0
+	spawn_timer.wait_time = 3.0
 	spawn_timer.autostart = true
 	spawn_timer.timeout.connect(_on_spawn_timer)
 	add_child(spawn_timer)
@@ -57,17 +57,19 @@ func _on_spawn_timer():
 func spawn_npc(lane: int):
 	var type_data = pick_npc_type()
 	var npc = type_data[0].instantiate()
-	npc.position = Vector2(-300, lane_npc_y[lane])
+	npc.position = Vector2(lane_npc_spawn_x[lane], lane_npc_y[lane])
 	npc.scale = Vector2(1.1, 1.1)
 	npc.z_index = 2
 	npc.lane_index = lane
 	npc.score_value = type_data[1]
+	npc.spawn_x = lane_npc_spawn_x[lane]
 
 	add_child(npc)
 	lane_npcs[lane] = npc
 
 	npc.reached_player.connect(_on_npc_reached_player.bind(npc))
 	npc.cup_collected.connect(_on_cup_collected.bind(npc))
+	npc.drink_finished.connect(_on_drink_finished.bind(npc))
 
 func pick_npc_type() -> Array:
 	var eligible = [npc_types[0]]
@@ -100,30 +102,34 @@ func _process(_delta):
 func spawn_cup():
 	var cup = cup_scene.instantiate()
 	cup.position = Vector2(player.position.x - 30, player.position.y)
-	cup.scale = Vector2(0.3, 0.3)
+	cup.scale = Vector2(1.2, 1.2)
 	cup.z_index = 2
 	add_child(cup)
-	cup.get_node("PathFollow2D").cup_missed.connect(_on_cup_missed)
+	var path_follow = cup.get_node("PathFollow2D")
+	path_follow.miss_x = lane_npc_spawn_x[player.current_lane]
+	path_follow.cup_missed.connect(_on_cup_missed)
 
 	can_spawn = false
 	await get_tree().create_timer(0.5).timeout
 	can_spawn = true
 
-func _on_cup_collected(progress: float, cup_y: float, npc):
+func _on_cup_collected(_progress: float, _cup_y: float, npc):
 	lane_npcs[npc.lane_index] = null
+
+func _on_drink_finished(progress: float, cup_y: float, _npc):
 	spawn_empty_cup(progress, cup_y)
 
 func spawn_empty_cup(start_progress: float, cup_y: float):
 	var cup = cup_scene.instantiate()
 	cup.position = Vector2(player.position.x - 30, cup_y)
-	cup.scale = Vector2(0.3, 0.3)
+	cup.scale = Vector2(1.2, 1.2)
 	cup.z_index = 2
 	add_child(cup)
 
 	var path_follow = cup.get_node("PathFollow2D")
 	path_follow.progress_ratio = start_progress
 	path_follow.direction = -1
-	path_follow.speed = path_follow.speed * 0.5
+	path_follow.speed = path_follow.speed * 0.3
 
 	var sprite = path_follow.get_node("Cup/Smoothie")
 	sprite.modulate = Color(0.5, 0.5, 0.7, 0.8)
@@ -157,6 +163,7 @@ func _on_game_over():
 	game_active = false
 	score_label.text = "GAME OVER"
 	lives_label.text = "Lives: 0"
+	player.play_lose()
 
 func _on_player_area_body_entered(body):
 	if body.name == "tapperplayer":

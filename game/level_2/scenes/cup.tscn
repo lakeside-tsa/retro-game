@@ -1,24 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://tapper_cup_001"]
+[gd_scene load_steps=8 format=3 uid="uid://dmcaibkqu2hte"]
 
-[ext_resource type="Texture2D" uid="uid://dp56mge63am3g" path="res://game/assets/art/food/PPP-PF.png" id="1_775uk"]
-[ext_resource type="Script" path="res://game/level_2/scripts/cup-path.gd" id="3_vg4mx"]
+[ext_resource type="Texture2D" uid="uid://clxrjbhlw07oi" path="res://game/level_2/assets/milkshake.png" id="2_65e2e"]
+[ext_resource type="Texture2D" uid="uid://ic1h03owylrh" path="res://game/level_2/assets/brokencup.png" id="2_hpirq"]
+[ext_resource type="Script" uid="uid://b7a2xgls5c42y" path="res://game/level_2/scripts/cup-path.gd" id="3_vg4mx"]
 
 [sub_resource type="Curve2D" id="Curve2D_vg4mx"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1200, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1800, 0)
 }
 point_count = 2
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2msd8"]
-radius = 40.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpirq"]
+atlas = ExtResource("2_65e2e")
+region = Rect2(10, 0, 20, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4dsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hpirq")
+}],
+"loop": true,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpirq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2e8s"]
+size = Vector2(13.333332, 43.333332)
 
 [node name="Cup Path" type="Path2D"]
 scale = Vector2(0.3, 0.3)
 curve = SubResource("Curve2D_vg4mx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(0, 0)
-rotation = 0.0
 rotates = false
 loop = false
 script = ExtResource("3_vg4mx")
@@ -27,9 +49,11 @@ script = ExtResource("3_vg4mx")
 collision_layer = 128
 collision_mask = 0
 
-[node name="Smoothie" type="Sprite2D" parent="PathFollow2D/Cup"]
-texture = ExtResource("1_775uk")
+[node name="Smoothie" type="AnimatedSprite2D" parent="PathFollow2D/Cup"]
+sprite_frames = SubResource("SpriteFrames_e4dsu")
+animation = &"broken"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Cup"]
-position = Vector2(5, 7)
-shape = SubResource("CircleShape2D_2msd8")
+position = Vector2(0, 1.666667)
+shape = SubResource("RectangleShape2D_x2e8s")
