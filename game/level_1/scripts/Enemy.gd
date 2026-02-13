@@ -20,6 +20,7 @@ var _config: EnemyConfig
 		return _config
 
 func _ready():
+	add_to_group("enemies")
 	apply_config()
 
 func apply_config():
