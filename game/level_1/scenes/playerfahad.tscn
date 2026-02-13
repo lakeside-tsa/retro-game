@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://f6rkpd4lc6lx"]
+[gd_scene load_steps=7 format=3 uid="uid://f6rkpd4lc6lx"]
 
 [ext_resource type="Script" uid="uid://b46kotev1l2qy" path="res://game/level_1/scripts/playerfahad.gd" id="1_p2p1x"]
 [ext_resource type="Texture2D" uid="uid://po3dw8kwpjci" path="res://game/level_1/assets/p1.png" id="2_sjn3b"]
@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_naqj3"]
 size = Vector2(3.5, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(7, 12)
 
 [node name="Playerfahad" type="CharacterBody2D"]
 script = ExtResource("1_p2p1x")
@@ -23,3 +26,13 @@ shape = SubResource("RectangleShape2D_naqj3")
 position = Vector2(0, -38)
 script = ExtResource("3_k72vb")
 laser_scene = ExtResource("4_cymho")
+
+[node name="PlayerHitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_hitbox")
+
+[connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hit"]
