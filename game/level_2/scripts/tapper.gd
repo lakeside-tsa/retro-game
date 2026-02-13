@@ -14,7 +14,8 @@ var can_spawn: bool = true
 var game_active: bool = true
 var win_target: int = 10000
 
-var lane_bar_y = [20, 70, 120, 170]
+var lane_bar_y = [-80, 25, 140, 270]
+var lane_npc_y = [-87, -7, 90, 185]
 var lane_npcs: Array = [null, null, null, null]
 
 var npc_types = [
@@ -27,21 +28,6 @@ func _ready():
 	Global.score = 0
 	score_label.text = "Score: 0"
 	lives_label.text = "Lives: 3"
-
-	for bar_y in lane_bar_y:
-		var bar_top = ColorRect.new()
-		bar_top.z_index = -1
-		bar_top.position = Vector2(120, bar_y)
-		bar_top.size = Vector2(250, 18)
-		bar_top.color = Color(0.545, 0.353, 0.169, 1)
-		add_child(bar_top)
-
-		var bar_front = ColorRect.new()
-		bar_front.z_index = -1
-		bar_front.position = Vector2(120, bar_y + 18)
-		bar_front.size = Vector2(250, 12)
-		bar_front.color = Color(0.396, 0.263, 0.129, 1)
-		add_child(bar_front)
 
 	var player_positions = []
 	for bar_y in lane_bar_y:
@@ -71,9 +57,9 @@ func _on_spawn_timer():
 func spawn_npc(lane: int):
 	var type_data = pick_npc_type()
 	var npc = type_data[0].instantiate()
-	var bar_y = lane_bar_y[lane]
-	npc.position = Vector2(338, bar_y - 7)
-	npc.scale = Vector2(0.198, 0.198)
+	npc.position = Vector2(-300, lane_npc_y[lane])
+	npc.scale = Vector2(1.1, 1.1)
+	npc.z_index = 2
 	npc.lane_index = lane
 	npc.score_value = type_data[1]
 
@@ -113,8 +99,9 @@ func _process(_delta):
 
 func spawn_cup():
 	var cup = cup_scene.instantiate()
-	cup.position = Vector2(player.position.x + 30, player.position.y)
+	cup.position = Vector2(player.position.x - 30, player.position.y)
 	cup.scale = Vector2(0.3, 0.3)
+	cup.z_index = 2
 	add_child(cup)
 	cup.get_node("PathFollow2D").cup_missed.connect(_on_cup_missed)
 
@@ -128,8 +115,9 @@ func _on_cup_collected(progress: float, cup_y: float, npc):
 
 func spawn_empty_cup(start_progress: float, cup_y: float):
 	var cup = cup_scene.instantiate()
-	cup.position = Vector2(player.position.x + 30, cup_y)
+	cup.position = Vector2(player.position.x - 30, cup_y)
 	cup.scale = Vector2(0.3, 0.3)
+	cup.z_index = 2
 	add_child(cup)
 
 	var path_follow = cup.get_node("PathFollow2D")

@@ -1,46 +1,93 @@
-[gd_scene load_steps=9 format=3 uid="uid://tapper_player_001"]
+[gd_scene load_steps=16 format=3 uid="uid://x3n53pbx1lmx"]
 
-[ext_resource type="Script" path="res://game/level_2/scripts/tapperplayer.gd" id="1_hfyo4"]
-[ext_resource type="Texture2D" uid="uid://dluubt6t45lev" path="res://game/assets/art/playeroscar.png" id="2_3jvfj"]
+[ext_resource type="Script" uid="uid://bbq5d5oex010e" path="res://game/level_2/scripts/tapperplayer.gd" id="1_hfyo4"]
+[ext_resource type="Texture2D" uid="uid://chiphayags1qp" path="res://game/level_2/assets/oliturning.png" id="2_ff2pc"]
+[ext_resource type="Texture2D" uid="uid://demxvo0uvdbsx" path="res://game/level_2/assets/whoosh.png" id="3_i58e8"]
+[ext_resource type="Texture2D" uid="uid://did1757cyv7pi" path="res://game/level_2/assets/olifilling.png" id="4_2mmnx"]
+[ext_resource type="Texture2D" uid="uid://c53b8ist0lnem" path="res://game/level_2/assets/oliidle.png" id="5_mjqoj"]
+[ext_resource type="Texture2D" uid="uid://crkxdrq70go85" path="res://game/level_2/assets/olilose1.png" id="6_k7512"]
+[ext_resource type="Texture2D" uid="uid://bk6wh77nme2xj" path="res://game/level_2/assets/olilose2.png" id="7_ad025"]
+[ext_resource type="Texture2D" uid="uid://cjapp28t2yscw" path="res://game/level_2/assets/olilose3.png" id="8_66iqi"]
+[ext_resource type="Texture2D" uid="uid://btld26q71jr4i" path="res://game/level_2/assets/oliserving.png" id="9_np2r1"]
+[ext_resource type="Texture2D" uid="uid://th83n0lopi1i" path="res://game/level_2/assets/oliwalk.png" id="10_2xxk1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ogw2h"]
-atlas = ExtResource("2_3jvfj")
-region = Rect2(0, 53, 21, 53)
+[sub_resource type="AtlasTexture" id="AtlasTexture_34h8b"]
+atlas = ExtResource("3_i58e8")
+region = Rect2(0, 0, 63, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wnin3"]
-atlas = ExtResource("2_3jvfj")
-region = Rect2(42, 53, 21, 53)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckflq"]
+atlas = ExtResource("10_2xxk1")
+region = Rect2(0, 0, 73, 132)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1il7x"]
-atlas = ExtResource("2_3jvfj")
-region = Rect2(84, 53, 21, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_50yal"]
-atlas = ExtResource("2_3jvfj")
-region = Rect2(126, 53, 21, 53)
+[sub_resource type="AtlasTexture" id="AtlasTexture_swcdo"]
+atlas = ExtResource("10_2xxk1")
+region = Rect2(73, 0, 73, 132)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hf2n6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ogw2h")
+"texture": ExtResource("2_ff2pc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wnin3")
+"texture": SubResource("AtlasTexture_34h8b")
+}],
+"loop": true,
+"name": &"change",
+"speed": 2.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1il7x")
+"texture": ExtResource("4_2mmnx")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_50yal")
+"texture": ExtResource("5_mjqoj")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("6_k7512")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ad025")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_66iqi")
+}],
+"loop": true,
+"name": &"lose",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_np2r1")
+}],
+"loop": true,
+"name": &"serve",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckflq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swcdo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxolh"]
-size = Vector2(10, 28)
+size = Vector2(23, 117)
 
 [node name="tapperplayer" type="CharacterBody2D"]
 collision_layer = 2
@@ -49,8 +96,9 @@ script = ExtResource("1_hfyo4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hf2n6")
 animation = &"idle"
-frame_progress = 0.58752674
+autoplay = "idle"
+frame_progress = 0.76072776
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 2)
+position = Vector2(-12.5, 2.5)
 shape = SubResource("RectangleShape2D_qxolh")

@@ -1,41 +1,116 @@
-[gd_scene load_steps=4 format=3 uid="uid://3wnsjd4ab5gm"]
+[gd_scene load_steps=11 format=4 uid="uid://3wnsjd4ab5gm"]
 
 [ext_resource type="Script" uid="uid://bn6xydblbi83g" path="res://game/level_2/scripts/tapper.gd" id="1_script"]
-[ext_resource type="PackedScene" path="res://game/level_2/scenes/tapperplayer.tscn" id="2_tyr23"]
+[ext_resource type="Texture2D" uid="uid://b2yqixkg2p13c" path="res://game/level_2/assets/tapperbackgound.png" id="2_h3eoc"]
+[ext_resource type="PackedScene" uid="uid://x3n53pbx1lmx" path="res://game/level_2/scenes/tapperplayer.tscn" id="2_tyr23"]
+[ext_resource type="Texture2D" uid="uid://be0mnpbytojl2" path="res://game/level_2/assets/barcounter.png" id="3_ux27y"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_l3bnx"]
+tile_data = PackedInt32Array(0, 65539, 0, 65536, 65539, 1, 131072, 65539, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_q2ix2"]
+tile_data = PackedInt32Array(0, 3, 0, 65536, 3, 1, 131072, 3, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ejb3n"]
+tile_data = PackedInt32Array(0, 131075, 0, 65536, 131075, 1, 131072, 131075, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22auv"]
+texture = ExtResource("3_ux27y")
+texture_region_size = Vector2i(67, 21)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8q0fo"]
+sources/3 = SubResource("TileSetAtlasSource_22auv")
+pattern_0 = SubResource("TileMapPattern_l3bnx")
+pattern_1 = SubResource("TileMapPattern_q2ix2")
+pattern_2 = SubResource("TileMapPattern_ejb3n")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyr23"]
-size = Vector2(61, 220)
+size = Vector2(134.75, 333)
 
 [node name="tapper-scene" type="Node2D"]
 script = ExtResource("1_script")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -594.0
+offset_top = -336.0
+offset_right = 588.0
+offset_bottom = 335.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("2_h3eoc")
+
+[node name="BarCounters" type="TileMapLayer" parent="."]
+z_index = 1
+tile_map_data = PackedByteArray("AADs/w0AAwAAAAAAAADs/w4AAwAAAAEAAADs/w8AAwAAAAIAAADu/wcAAwAAAAAAAADu/wgAAwAAAAEAAADu/wkAAwAAAAIAAADx/wEAAwAAAAAAAADx/wIAAwAAAAEAAADx/wMAAwAAAAIAAADz//z/AwAAAAAAAADz//3/AwAAAAEAAADz//7/AwAAAAIAAAD3//z/AwABAAAAAAD3//3/AwABAAEAAAD3//7/AwABAAIAAAD4//z/AwABAAAAAAD4//3/AwABAAEAAAD4//7/AwABAAIAAAD5//z/AwABAAAAAAD5//3/AwABAAEAAAD5//7/AwABAAIAAAD6//z/AwABAAAAAAD6//3/AwABAAEAAAD6//7/AwABAAIAAAD7//z/AwABAAAAAAD7//3/AwABAAEAAAD7//7/AwABAAIAAAD8//z/AwABAAAAAAD8//3/AwABAAEAAAD8//7/AwABAAIAAAD9//z/AwABAAAAAAD9//3/AwABAAEAAAD9//7/AwABAAIAAAD+//z/AwABAAAAAAD+//3/AwABAAEAAAD+//7/AwABAAIAAAD///z/AwABAAAAAAD///3/AwABAAEAAAD///7/AwABAAIAAAAAAPz/AwABAAAAAAAAAP3/AwABAAEAAAAAAP7/AwABAAIAAAABAPz/AwABAAAAAAABAP3/AwABAAEAAAABAP7/AwABAAIAAAACAPz/AwABAAAAAAACAP3/AwABAAEAAAACAP7/AwABAAIAAAD0/wEAAwABAAAAAAD0/wIAAwABAAEAAAD0/wMAAwABAAIAAAD1/wEAAwABAAAAAAD1/wIAAwABAAEAAAD1/wMAAwABAAIAAAD2/wEAAwABAAAAAAD2/wIAAwABAAEAAAD2/wMAAwABAAIAAAD3/wEAAwABAAAAAAD3/wIAAwABAAEAAAD3/wMAAwABAAIAAAD4/wEAAwABAAAAAAD4/wIAAwABAAEAAAD4/wMAAwABAAIAAAD5/wEAAwABAAAAAAD5/wIAAwABAAEAAAD5/wMAAwABAAIAAAD6/wEAAwABAAAAAAD6/wIAAwABAAEAAAD6/wMAAwABAAIAAAD7/wEAAwABAAAAAAD7/wIAAwABAAEAAAD7/wMAAwABAAIAAAD8/wEAAwABAAAAAAD8/wIAAwABAAEAAAD8/wMAAwABAAIAAAD9/wEAAwABAAAAAAD9/wIAAwABAAEAAAD9/wMAAwABAAIAAAD+/wEAAwABAAAAAAD+/wIAAwABAAEAAAD+/wMAAwABAAIAAAD//wEAAwABAAAAAAD//wIAAwABAAEAAAD//wMAAwABAAIAAAAAAAEAAwABAAAAAAAAAAIAAwABAAEAAAAAAAMAAwABAAIAAAABAAEAAwABAAAAAAABAAIAAwABAAEAAAABAAMAAwABAAIAAAACAAEAAwABAAAAAAACAAIAAwABAAEAAAACAAMAAwABAAIAAADy/wcAAwABAAAAAADy/wgAAwABAAEAAADy/wkAAwABAAIAAADz/wcAAwABAAAAAADz/wgAAwABAAEAAADz/wkAAwABAAIAAAD0/wcAAwABAAAAAAD0/wgAAwABAAEAAAD0/wkAAwABAAIAAAD1/wcAAwABAAAAAAD1/wgAAwABAAEAAAD1/wkAAwABAAIAAAD2/wcAAwABAAAAAAD2/wgAAwABAAEAAAD2/wkAAwABAAIAAAD3/wcAAwABAAAAAAD3/wgAAwABAAEAAAD3/wkAAwABAAIAAAD4/wcAAwABAAAAAAD4/wgAAwABAAEAAAD4/wkAAwABAAIAAAD5/wcAAwABAAAAAAD5/wgAAwABAAEAAAD5/wkAAwABAAIAAAD6/wcAAwABAAAAAAD6/wgAAwABAAEAAAD6/wkAAwABAAIAAAD7/wcAAwABAAAAAAD7/wgAAwABAAEAAAD7/wkAAwABAAIAAAD8/wcAAwABAAAAAAD8/wgAAwABAAEAAAD8/wkAAwABAAIAAAD9/wcAAwABAAAAAAD9/wgAAwABAAEAAAD9/wkAAwABAAIAAAD+/wcAAwABAAAAAAD+/wgAAwABAAEAAAD+/wkAAwABAAIAAAD//wcAAwABAAAAAAD//wgAAwABAAEAAAD//wkAAwABAAIAAAAAAAcAAwABAAAAAAAAAAgAAwABAAEAAAAAAAkAAwABAAIAAAABAAcAAwABAAAAAAABAAgAAwABAAEAAAABAAkAAwABAAIAAAACAAcAAwABAAAAAAACAAgAAwABAAEAAAACAAkAAwABAAIAAADv/w0AAwABAAAAAADv/w4AAwABAAEAAADv/w8AAwABAAIAAADw/w0AAwABAAAAAADw/w4AAwABAAEAAADw/w8AAwABAAIAAADx/w0AAwABAAAAAADx/w4AAwABAAEAAADx/w8AAwABAAIAAADy/w0AAwABAAAAAADy/w4AAwABAAEAAADy/w8AAwABAAIAAADz/w0AAwABAAAAAADz/w4AAwABAAEAAADz/w8AAwABAAIAAAD0/w0AAwABAAAAAAD0/w4AAwABAAEAAAD0/w8AAwABAAIAAAD1/w0AAwABAAAAAAD1/w4AAwABAAEAAAD1/w8AAwABAAIAAAD2/w0AAwABAAAAAAD2/w4AAwABAAEAAAD2/w8AAwABAAIAAAD3/w0AAwABAAAAAAD3/w4AAwABAAEAAAD3/w8AAwABAAIAAAD4/w0AAwABAAAAAAD4/w4AAwABAAEAAAD4/w8AAwABAAIAAAD5/w0AAwABAAAAAAD5/w4AAwABAAEAAAD5/w8AAwABAAIAAAD6/w0AAwABAAAAAAD6/w4AAwABAAEAAAD6/w8AAwABAAIAAAD7/w0AAwABAAAAAAD7/w4AAwABAAEAAAD7/w8AAwABAAIAAAD8/w0AAwABAAAAAAD8/w4AAwABAAEAAAD8/w8AAwABAAIAAAD9/w0AAwABAAAAAAD9/w4AAwABAAEAAAD9/w8AAwABAAIAAAD+/w0AAwABAAAAAAD+/w4AAwABAAEAAAD+/w8AAwABAAIAAAD//w0AAwABAAAAAAD//w4AAwABAAEAAAD//w8AAwABAAIAAAAAAA0AAwABAAAAAAAAAA4AAwABAAEAAAAAAA8AAwABAAIAAAABAA0AAwABAAAAAAABAA4AAwABAAEAAAABAA8AAwABAAIAAAACAA0AAwABAAAAAAACAA4AAwABAAEAAAACAA8AAwABAAIAAAAGAPz/AwACAAAAAAAGAP3/AwACAAEAAAAGAP7/AwACAAIAAAAGAAEAAwACAAAAAAAGAAIAAwACAAEAAAAGAAMAAwACAAIAAAAGAAcAAwACAAAAAAAGAAgAAwACAAEAAAAGAAkAAwACAAIAAAAFAA0AAwACAAAAAAAFAA4AAwACAAEAAAAFAA8AAwACAAIAAAAGAA0AAwACAAAAAAAGAA4AAwACAAEAAAAGAA8AAwACAAIAAAAJAA0AAwACAAAAAAAJAA4AAwACAAEAAAAJAA8AAwACAAIAAAALAA0AAwACAAAAAAALAA4AAwACAAEAAAALAA8AAwACAAIAAAAHAAcAAwACAAAAAAAHAAgAAwACAAEAAAAHAAkAAwACAAIAAAAJAAcAAwACAAAAAAAJAAgAAwACAAEAAAAJAAkAAwACAAIAAAAHAAEAAwACAAAAAAAHAAIAAwACAAEAAAAHAAMAAwACAAIAAAA=")
+tile_set = SubResource("TileSet_8q0fo")
+
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(250, 90)
 
 [node name="tapperplayer" parent="." instance=ExtResource("2_tyr23")]
-position = Vector2(110, 81)
-scale = Vector2(3, 3)
+position = Vector2(249, 194)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(161, 99)
+position = Vector2(233, 249)
 
 [node name="PlayerArea" type="Area2D" parent="."]
-position = Vector2(100, 95)
+position = Vector2(100, 90)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+position = Vector2(85.625, 6.5)
 shape = SubResource("RectangleShape2D_tyr23")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_right = 200.0
-offset_bottom = 40.0
+offset_left = -175.0
+offset_top = -308.0
+offset_right = 25.0
+offset_bottom = -268.0
 text = "Score: 0"
 
 [node name="LivesLabel" type="Label" parent="."]
-offset_top = 40.0
-offset_right = 200.0
-offset_bottom = 80.0
+offset_left = 101.0
+offset_top = -310.0
+offset_right = 301.0
+offset_bottom = -270.0
 text = "Lives: 3"
 
 [connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]

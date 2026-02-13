@@ -1,36 +1,79 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://bnoesfjj54565"]
 
 [ext_resource type="Script" uid="uid://mjppvv18fo5q" path="res://game/level_2/scripts/npc.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://bf06w4fmc6vgb" path="res://game/assets/art/ingredients/Crab.png" id="2_texture"]
+[ext_resource type="Texture2D" uid="uid://di21e25irdsnn" path="res://game/level_2/assets/juniorsprites.png" id="3_yxctf"]
+[ext_resource type="Texture2D" uid="uid://c2wsx1dy61dyd" path="res://game/level_2/assets/juniorhappy.png" id="4_ljsh5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6ycb"]
+atlas = ExtResource("3_yxctf")
+region = Rect2(76, 0, 38, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8ky0"]
+atlas = ExtResource("3_yxctf")
+region = Rect2(117, 0, 39, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p5ak"]
+atlas = ExtResource("3_yxctf")
+region = Rect2(0, 0, 38, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukvug"]
+atlas = ExtResource("3_yxctf")
+region = Rect2(38, 0, 38, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_texture")
+"texture": SubResource("AtlasTexture_u6ycb")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_q8ky0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"drink",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ljsh5")
+}],
+"loop": true,
+"name": &"happy",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p5ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukvug")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 2.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
-radius = 50.0
-height = 108.0
+radius = 29.0
+height = 58.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_detect"]
-radius = 40.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5svy3"]
+height = 52.0
 
 [node name="NPC" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
 collision_mask = 128
 script = ExtResource("1_script")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_crab")
-animation = &"default"
-autoplay = "default"
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.7622392
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
 shape = SubResource("CapsuleShape2D_body")
 
 [node name="Detection Area" type="Area2D" parent="."]
@@ -38,6 +81,7 @@ collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Area"]
-shape = SubResource("CircleShape2D_detect")
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_5svy3")
 
 [connection signal="area_entered" from="Detection Area" to="." method="_on_area_entered"]

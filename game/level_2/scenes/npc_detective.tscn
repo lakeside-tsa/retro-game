@@ -1,34 +1,79 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://bx8lao58xfv6s"]
 
 [ext_resource type="Script" uid="uid://mjppvv18fo5q" path="res://game/level_2/scripts/npc.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://c78l3hudq7jww" path="res://game/assets/art/idlecritter.png" id="2_texture"]
+[ext_resource type="Texture2D" uid="uid://vjd3d25n77ri" path="res://game/level_2/assets/detectivesprites.png" id="3_1sr4k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anf56"]
+atlas = ExtResource("3_1sr4k")
+region = Rect2(82, 0, 41, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnial"]
+atlas = ExtResource("3_1sr4k")
+region = Rect2(126, 0, 42, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp1fv"]
+atlas = ExtResource("3_1sr4k")
+region = Rect2(168, 0, 42, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq0w4"]
+atlas = ExtResource("3_1sr4k")
+region = Rect2(0, 0, 41, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tliu"]
+atlas = ExtResource("3_1sr4k")
+region = Rect2(41, 0, 41, 67)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_critter"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_texture")
+"texture": SubResource("AtlasTexture_anf56")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_nnial")
 }],
 "loop": true,
-"name": &"default",
+"name": &"drink",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp1fv")
+}],
+"loop": true,
+"name": &"happy",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq0w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tliu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 2.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
-radius = 50.0
-height = 108.0
+radius = 15.0
+height = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_detect"]
-radius = 40.0
+radius = 29.017237
 
 [node name="NPC" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
 collision_mask = 128
 script = ExtResource("1_script")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_critter")
-animation = &"default"
-autoplay = "default"
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.08461485
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_body")

@@ -8,8 +8,8 @@ var score_value: int = 1
 var lane_index: int = 0
 
 func _physics_process(_delta):
-	position.x -= speed * _delta
-	if position.x <= 120:
+	position.x += speed * _delta
+	if position.x >= 100:
 		reached_player.emit()
 		queue_free()
 
