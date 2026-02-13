@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://did1757cyv7pi"
-path.s3tc="res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.s3tc.ctex"
-path.etc2="res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.etc2.ctex"
+path="res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/olifilling.png"
-dest_files=["res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.s3tc.ctex", "res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.etc2.ctex"]
+dest_files=["res://.godot/imported/olifilling.png-dec9434ed2f1d260d04b9737ff697662.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk6wh77nme2xj"
-path.s3tc="res://.godot/imported/olilose2.png-fdd32cb70c37f3d829f3dc16767a4da1.s3tc.ctex"
-path.etc2="res://.godot/imported/olilose2.png-fdd32cb70c37f3d829f3dc16767a4da1.etc2.ctex"
+path="res://.godot/imported/oliwin1.png-0f46d74105da8a2c22ec487b8b87ed0e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level_2/assets/olilose2.png"
-dest_files=["res://.godot/imported/olilose2.png-fdd32cb70c37f3d829f3dc16767a4da1.s3tc.ctex", "res://.godot/imported/olilose2.png-fdd32cb70c37f3d829f3dc16767a4da1.etc2.ctex"]
+source_file="res://game/level_2/assets/oliwin1.png"
+dest_files=["res://.godot/imported/oliwin1.png-0f46d74105da8a2c22ec487b8b87ed0e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

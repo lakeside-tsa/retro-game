@@ -47,7 +47,7 @@ region = Rect2(285, 131, 95, 131)
 [sub_resource type="SpriteFrames" id="SpriteFrames_hf2n6"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_r8xdh")
 }, {
 "duration": 1.0,
@@ -116,10 +116,9 @@ script = ExtResource("1_hfyo4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hf2n6")
-animation = &"change"
+animation = &"walk"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
+frame_progress = 0.0024492152
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 4)

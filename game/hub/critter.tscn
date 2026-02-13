@@ -23,13 +23,13 @@ region = Rect2(117, 0, 39, 101)
 atlas = ExtResource("1_87h13")
 region = Rect2(156, 0, 39, 101)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gxuvw"]
-atlas = ExtResource("1_87h13")
-region = Rect2(195, 0, 39, 101)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rr82c"]
 atlas = ExtResource("1_87h13")
 region = Rect2(234, 0, 39, 101)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxuvw"]
+atlas = ExtResource("1_87h13")
+region = Rect2(195, 0, 39, 101)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y42vr"]
 atlas = ExtResource("1_87h13")
@@ -97,11 +97,11 @@ animations = [{
 "duration": 0.6,
 "texture": SubResource("AtlasTexture_x8dvd")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gxuvw")
-}, {
 "duration": 0.6,
 "texture": SubResource("AtlasTexture_rr82c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxuvw")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y42vr")
@@ -164,8 +164,8 @@ texture_filter = 1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qn8j6")
 animation = &"idle"
-frame = 5
-frame_progress = 0.22131681
+frame = 3
+frame_progress = 0.33688545
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 0.5)

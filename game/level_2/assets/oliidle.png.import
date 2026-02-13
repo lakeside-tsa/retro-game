@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c53b8ist0lnem"
-path.s3tc="res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.s3tc.ctex"
-path.etc2="res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.etc2.ctex"
+path="res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/oliidle.png"
-dest_files=["res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.s3tc.ctex", "res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.etc2.ctex"]
+dest_files=["res://.godot/imported/oliidle.png-01a20781d396b11615a96734608d86c0.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
