@@ -51,7 +51,7 @@ folder_colors={
 
 [gui]
 
-theme/custom_font="res://game/assets/fonts/Peaberry-Base.otf"
+theme/custom_font="res://game/assets/fonts/TTF/dogicabold.ttf"
 
 [importer_defaults]
 
@@ -161,5 +161,7 @@ down={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-textures/vram_compression/import_etc2_astc=true
+textures/vram_compression/compress_with_gpu=false
+textures/vram_compression/cache_gpu_compressor=false
+textures/lossless_compression/force_png=true
 2d/snap/snap_2d_transforms_to_pixel=true
