@@ -7,7 +7,7 @@ var health := 100
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 const DAMAGE = 40
-var movement_direction = Vector2.DOWN
+var movement_direction = Vector2.RIGHT
 
 # backing variable
 var _config: EnemyConfig

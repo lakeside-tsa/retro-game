@@ -4,18 +4,20 @@ signal level_completed
 
 @onready var lives_label = $LivesLabel
 @onready var game_over_label = $GameOverLabel
+@onready var game_clear_overlay = $GameClearOverlay
 @onready var player = $Playerfahad
 
 var lives: int = 3
 var game_active: bool = true
 var enemy_projectile_scene = preload("res://game/level_1/scenes/enemy_projectile.tscn")
+const MAX_ENEMY_PROJECTILES = 15
 
 func _ready():
 	lives_label.text = "Lives: 3"
 	player.player_hit.connect(_on_player_hit)
 
 	var shoot_timer = Timer.new()
-	shoot_timer.wait_time = 0.5
+	shoot_timer.wait_time = 0.8
 	shoot_timer.autostart = true
 	shoot_timer.timeout.connect(_on_enemy_shoot_timer)
 	add_child(shoot_timer)
@@ -26,6 +28,11 @@ func _on_enemy_shoot_timer():
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	if enemies.is_empty():
 		return
+
+	var active_projectiles = get_children().filter(func(c): return c is EnemyProjectile)
+	if active_projectiles.size() >= MAX_ENEMY_PROJECTILES:
+		return
+
 	var shoot_chance = clampf(enemies.size() / 30.0, 0.05, 1.0)
 	if randf() > shoot_chance:
 		return
@@ -53,6 +60,23 @@ func _on_player_hit():
 	lives_label.text = "Lives: " + str(lives)
 	if lives <= 0:
 		_on_game_over()
+
+func _process(_delta):
+	if not game_active:
+		return
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	if enemies.is_empty():
+		_on_game_clear()
+
+func _on_game_clear():
+	game_active = false
+	game_clear_overlay.visible = true
+	# Clean up remaining projectiles
+	for child in get_children():
+		if child is EnemyProjectile or child is Laser:
+			child.queue_free()
+	await get_tree().create_timer(5.0).timeout
+	level_completed.emit()
 
 func _on_game_over():
 	game_active = false
