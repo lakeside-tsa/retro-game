@@ -1,0 +1,167 @@
+[gd_scene load_steps=22 format=3 uid="uid://c23wqfgoh1csy"]
+
+[ext_resource type="Script" uid="uid://djwgcmmtfr2k3" path="res://game/hub/hub.gd" id="1_hub"]
+[ext_resource type="PackedScene" uid="uid://d0g8v2xypjul6" path="res://game/hub/critter.tscn" id="2_m6ciy"]
+[ext_resource type="PackedScene" uid="uid://bn8rvp83jsj77" path="res://game/hub/backgroundforhub.tscn" id="3_r0x2i"]
+[ext_resource type="Script" uid="uid://c6ye4lwd7f17t" path="res://game/hub/backgroundforhub.gd" id="4_r0x2i"]
+[ext_resource type="Texture2D" uid="uid://dupp0teid5gyb" path="res://game/level_2/assets/tappersprites.png" id="5_4j32w"]
+[ext_resource type="Texture2D" uid="uid://db4nfr8io7g2f" path="res://game/assets/art/cab_2_fixed.png" id="6_kvlqi"]
+[ext_resource type="Texture2D" uid="uid://l6xvbodruv8t" path="res://game/assets/art/oceanicincursionsprites.png" id="7_886rd"]
+[ext_resource type="Texture2D" uid="uid://cucqophq0g4qw" path="res://game/assets/art/ddr.png" id="8_v1qnj"]
+[ext_resource type="Texture2D" uid="uid://d4b224ennry2l" path="res://game/assets/art/ddrsprites.png" id="9_fevru"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvlqi"]
+atlas = ExtResource("5_4j32w")
+region = Rect2(205, 347, 34, 125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_886rd"]
+atlas = ExtResource("5_4j32w")
+region = Rect2(240, 347, 34, 125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfwml"]
+atlas = ExtResource("5_4j32w")
+region = Rect2(274, 347, 35, 125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1qnj"]
+animations = [{
+"frames": [{
+"duration": 7.5,
+"texture": SubResource("AtlasTexture_kvlqi")
+}, {
+"duration": 7.5,
+"texture": SubResource("AtlasTexture_886rd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfwml")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1qnj"]
+atlas = ExtResource("7_886rd")
+region = Rect2(203, 0, 90, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fevru"]
+atlas = ExtResource("7_886rd")
+region = Rect2(290, 0, 90, 183)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0kon"]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_v1qnj")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_fevru")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0kon"]
+atlas = ExtResource("8_v1qnj")
+region = Rect2(4.4864197, 0, 120.342285, 139.04596)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1anm"]
+atlas = ExtResource("9_fevru")
+region = Rect2(249, 10, 51, 131)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ist7"]
+atlas = ExtResource("9_fevru")
+region = Rect2(300, 10, 51, 131)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl83l"]
+atlas = ExtResource("9_fevru")
+region = Rect2(351, 10, 51, 131)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bj6pp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1anm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ist7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl83l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ist7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Hub" type="Node2D"]
+script = ExtResource("1_hub")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_m6ciy")]
+z_index = 10
+position = Vector2(-507.00003, 20.000011)
+
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, 0.80000114)
+process_callback = 0
+limit_left = -890
+limit_top = -320
+limit_right = 1500
+limit_bottom = 344
+position_smoothing_speed = 12.0
+
+[node name="Backgroundforhub" parent="." instance=ExtResource("3_r0x2i")]
+position = Vector2(-894, -323)
+script = ExtResource("4_r0x2i")
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = -580.0
+offset_top = -197.0
+offset_right = 20.0
+offset_bottom = 3.0
+theme_override_font_sizes/font_size = 20
+text = "Press 1 - Oceanic Incursion
+Press 2 - Dashers
+Press 3 - DDR"
+horizontal_alignment = 1
+
+[node name="Oli" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(672.99994, 4)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_v1qnj")
+autoplay = "default"
+
+[node name="Dashers" type="Sprite2D" parent="."]
+position = Vector2(522, 27)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("6_kvlqi")
+
+[node name="Pat and OI" type="AnimatedSprite2D" parent="."]
+position = Vector2(-236, -47)
+scale = Vector2(2.2, 2.2)
+sprite_frames = SubResource("SpriteFrames_o0kon")
+autoplay = "default"
+frame = 1
+frame_progress = 0.49017435
+
+[node name="DDR" type="Sprite2D" parent="."]
+position = Vector2(1278.0001, -25.999998)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_o0kon")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1043, 2)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_bj6pp")
+autoplay = "default"
+frame = 3
+frame_progress = 0.8421338

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddr_note_001"]
+
+[ext_resource type="Script" path="res://game/level_3/scripts/note.gd" id="1_wn01w"]
+[ext_resource type="Texture2D" path="res://game/level_3/assets/arrow.png" id="2_lyp5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo7dk"]
+size = Vector2(50, 50)
+
+[node name="Note" type="Area2D"]
+script = ExtResource("1_wn01w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_lyp5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eo7dk")
