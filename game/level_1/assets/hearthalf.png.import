@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyx5uulb3t633"
 path.s3tc="res://.godot/imported/hearthalf.png-638709c89022e8501a83bd0b17f25515.s3tc.ctex"
-path.etc2="res://.godot/imported/hearthalf.png-638709c89022e8501a83bd0b17f25515.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_1/assets/hearthalf.png"
-dest_files=["res://.godot/imported/hearthalf.png-638709c89022e8501a83bd0b17f25515.s3tc.ctex", "res://.godot/imported/hearthalf.png-638709c89022e8501a83bd0b17f25515.etc2.ctex"]
+dest_files=["res://.godot/imported/hearthalf.png-638709c89022e8501a83bd0b17f25515.s3tc.ctex"]
 
 [params]
 

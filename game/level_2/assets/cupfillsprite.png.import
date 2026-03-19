@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhj72i4v0wfas"
 path.s3tc="res://.godot/imported/cupfillsprite.png-72873fccfb7a19c81752236f01d7b9db.s3tc.ctex"
-path.etc2="res://.godot/imported/cupfillsprite.png-72873fccfb7a19c81752236f01d7b9db.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/cupfillsprite.png"
-dest_files=["res://.godot/imported/cupfillsprite.png-72873fccfb7a19c81752236f01d7b9db.s3tc.ctex", "res://.godot/imported/cupfillsprite.png-72873fccfb7a19c81752236f01d7b9db.etc2.ctex"]
+dest_files=["res://.godot/imported/cupfillsprite.png-72873fccfb7a19c81752236f01d7b9db.s3tc.ctex"]
 
 [params]
 

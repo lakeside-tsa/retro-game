@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5a76jhdjsh0c"
 path.s3tc="res://.godot/imported/dogica.png-c24c2c75b892a7e4f8b41400fbf0d3ea.s3tc.ctex"
-path.etc2="res://.godot/imported/dogica.png-c24c2c75b892a7e4f8b41400fbf0d3ea.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/assets/fonts/Specimen/dogica.png"
-dest_files=["res://.godot/imported/dogica.png-c24c2c75b892a7e4f8b41400fbf0d3ea.s3tc.ctex", "res://.godot/imported/dogica.png-c24c2c75b892a7e4f8b41400fbf0d3ea.etc2.ctex"]
+dest_files=["res://.godot/imported/dogica.png-c24c2c75b892a7e4f8b41400fbf0d3ea.s3tc.ctex"]
 
 [params]
 

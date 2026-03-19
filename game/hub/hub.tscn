@@ -1,27 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c23wqfgoh1csy"]
+[gd_scene load_steps=5 format=3 uid="uid://c23wqfgoh1csy"]
 
-[ext_resource type="Script" path="res://game/hub/hub.gd" id="1_hub"]
+[ext_resource type="Script" uid="uid://djwgcmmtfr2k3" path="res://game/hub/hub.gd" id="1_hub"]
+[ext_resource type="PackedScene" uid="uid://d0g8v2xypjul6" path="res://game/hub/critter.tscn" id="2_m6ciy"]
+[ext_resource type="Script" uid="uid://nlolhdlycduh" path="res://game/hub/critter.gd" id="3_4j32w"]
+[ext_resource type="PackedScene" uid="uid://bn8rvp83jsj77" path="res://game/hub/backgroundforhub.tscn" id="3_r0x2i"]
 
 [node name="Hub" type="Node2D"]
 script = ExtResource("1_hub")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="Background" type="ColorRect" parent="."]
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
-color = Color(0.15, 0.2, 0.3, 1)
-
-[node name="Title" type="Label" parent="."]
-offset_left = -300.0
-offset_top = -200.0
-offset_right = 300.0
-offset_bottom = -150.0
-theme_override_font_sizes/font_size = 36
-text = "HUB"
-horizontal_alignment = 1
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = -300.0
@@ -33,3 +18,17 @@ text = "Press 1 - Space Invaders
 Press 2 - Tapper
 Press 3 - DDR"
 horizontal_alignment = 1
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_m6ciy")]
+z_index = 10
+scale = Vector2(2.2, 2.2)
+script = ExtResource("3_4j32w")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = -570
+limit_top = -350
+limit_right = 1825
+limit_bottom = 317
+
+[node name="Backgroundforhub" parent="." instance=ExtResource("3_r0x2i")]
+position = Vector2(-570, -360)

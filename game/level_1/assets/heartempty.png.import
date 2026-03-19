@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs2sbkuu8fi0w"
 path.s3tc="res://.godot/imported/heartempty.png-e2cd4813389d3c53ef2fd1a8efc97cab.s3tc.ctex"
-path.etc2="res://.godot/imported/heartempty.png-e2cd4813389d3c53ef2fd1a8efc97cab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_1/assets/heartempty.png"
-dest_files=["res://.godot/imported/heartempty.png-e2cd4813389d3c53ef2fd1a8efc97cab.s3tc.ctex", "res://.godot/imported/heartempty.png-e2cd4813389d3c53ef2fd1a8efc97cab.etc2.ctex"]
+dest_files=["res://.godot/imported/heartempty.png-e2cd4813389d3c53ef2fd1a8efc97cab.s3tc.ctex"]
 
 [params]
 

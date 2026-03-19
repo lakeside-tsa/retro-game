@@ -155,7 +155,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87h13"]
-size = Vector2(30, 97)
+size = Vector2(36, 98)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 texture_filter = 1
@@ -164,9 +164,9 @@ texture_filter = 1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qn8j6")
 animation = &"idle"
-frame = 3
-frame_progress = 0.33688545
+autoplay = "idle"
+frame_progress = 0.04528149
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0.5)
+position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_87h13")

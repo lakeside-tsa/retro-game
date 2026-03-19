@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1h5s2bf6uwb4"
 path.s3tc="res://.godot/imported/detectivehand.png-d615eb018234f697de9c123e459f0057.s3tc.ctex"
-path.etc2="res://.godot/imported/detectivehand.png-d615eb018234f697de9c123e459f0057.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/detectivehand.png"
-dest_files=["res://.godot/imported/detectivehand.png-d615eb018234f697de9c123e459f0057.s3tc.ctex", "res://.godot/imported/detectivehand.png-d615eb018234f697de9c123e459f0057.etc2.ctex"]
+dest_files=["res://.godot/imported/detectivehand.png-d615eb018234f697de9c123e459f0057.s3tc.ctex"]
 
 [params]
 

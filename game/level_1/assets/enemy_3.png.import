@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://gwht3h45ogxa"
 path.s3tc="res://.godot/imported/enemy_3.png-6bb2c3323e317c162f1a148d42535b86.s3tc.ctex"
-path.etc2="res://.godot/imported/enemy_3.png-6bb2c3323e317c162f1a148d42535b86.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_1/assets/enemy_3.png"
-dest_files=["res://.godot/imported/enemy_3.png-6bb2c3323e317c162f1a148d42535b86.s3tc.ctex", "res://.godot/imported/enemy_3.png-6bb2c3323e317c162f1a148d42535b86.etc2.ctex"]
+dest_files=["res://.godot/imported/enemy_3.png-6bb2c3323e317c162f1a148d42535b86.s3tc.ctex"]
 
 [params]
 

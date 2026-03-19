@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ic1h03owylrh"
 path.s3tc="res://.godot/imported/brokencup.png-b8b1f1249f0acdb0c348585759e21489.s3tc.ctex"
-path.etc2="res://.godot/imported/brokencup.png-b8b1f1249f0acdb0c348585759e21489.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/brokencup.png"
-dest_files=["res://.godot/imported/brokencup.png-b8b1f1249f0acdb0c348585759e21489.s3tc.ctex", "res://.godot/imported/brokencup.png-b8b1f1249f0acdb0c348585759e21489.etc2.ctex"]
+dest_files=["res://.godot/imported/brokencup.png-b8b1f1249f0acdb0c348585759e21489.s3tc.ctex"]
 
 [params]
 

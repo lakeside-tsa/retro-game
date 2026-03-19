@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://jqtuse3ehnl5"
 path.s3tc="res://.godot/imported/heartfull.png-f526d725c097f34043933d516132ec5b.s3tc.ctex"
-path.etc2="res://.godot/imported/heartfull.png-f526d725c097f34043933d516132ec5b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_1/assets/heartfull.png"
-dest_files=["res://.godot/imported/heartfull.png-f526d725c097f34043933d516132ec5b.s3tc.ctex", "res://.godot/imported/heartfull.png-f526d725c097f34043933d516132ec5b.etc2.ctex"]
+dest_files=["res://.godot/imported/heartfull.png-f526d725c097f34043933d516132ec5b.s3tc.ctex"]
 
 [params]
 

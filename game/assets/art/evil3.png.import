@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cumb2gfdxxjdm"
 path.s3tc="res://.godot/imported/evil3.png-c69d7d9c3d6adca6b03c5d8de7435c77.s3tc.ctex"
-path.etc2="res://.godot/imported/evil3.png-c69d7d9c3d6adca6b03c5d8de7435c77.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/assets/art/evil3.png"
-dest_files=["res://.godot/imported/evil3.png-c69d7d9c3d6adca6b03c5d8de7435c77.s3tc.ctex", "res://.godot/imported/evil3.png-c69d7d9c3d6adca6b03c5d8de7435c77.etc2.ctex"]
+dest_files=["res://.godot/imported/evil3.png-c69d7d9c3d6adca6b03c5d8de7435c77.s3tc.ctex"]
 
 [params]
 

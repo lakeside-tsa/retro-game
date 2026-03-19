@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1qxw5372thsf"
 path.s3tc="res://.godot/imported/drinkbar.png-254deaaaae3e6ec7d087b45cc18ba978.s3tc.ctex"
-path.etc2="res://.godot/imported/drinkbar.png-254deaaaae3e6ec7d087b45cc18ba978.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/drinkbar.png"
-dest_files=["res://.godot/imported/drinkbar.png-254deaaaae3e6ec7d087b45cc18ba978.s3tc.ctex", "res://.godot/imported/drinkbar.png-254deaaaae3e6ec7d087b45cc18ba978.etc2.ctex"]
+dest_files=["res://.godot/imported/drinkbar.png-254deaaaae3e6ec7d087b45cc18ba978.s3tc.ctex"]
 
 [params]
 

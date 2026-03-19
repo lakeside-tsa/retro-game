@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bel776musmpq2"
 path.s3tc="res://.godot/imported/pixil-frame-0.png-b9c5b5065ee874411372bb64a7682cca.s3tc.ctex"
-path.etc2="res://.godot/imported/pixil-frame-0.png-b9c5b5065ee874411372bb64a7682cca.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/assets/art/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-b9c5b5065ee874411372bb64a7682cca.s3tc.ctex", "res://.godot/imported/pixil-frame-0.png-b9c5b5065ee874411372bb64a7682cca.etc2.ctex"]
+dest_files=["res://.godot/imported/pixil-frame-0.png-b9c5b5065ee874411372bb64a7682cca.s3tc.ctex"]
 
 [params]
 

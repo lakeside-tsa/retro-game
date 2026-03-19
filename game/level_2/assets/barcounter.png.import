@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://be0mnpbytojl2"
 path.s3tc="res://.godot/imported/barcounter.png-8c17dc92c287ffb4326cfef48f209779.s3tc.ctex"
-path.etc2="res://.godot/imported/barcounter.png-8c17dc92c287ffb4326cfef48f209779.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/barcounter.png"
-dest_files=["res://.godot/imported/barcounter.png-8c17dc92c287ffb4326cfef48f209779.s3tc.ctex", "res://.godot/imported/barcounter.png-8c17dc92c287ffb4326cfef48f209779.etc2.ctex"]
+dest_files=["res://.godot/imported/barcounter.png-8c17dc92c287ffb4326cfef48f209779.s3tc.ctex"]
 
 [params]
 
