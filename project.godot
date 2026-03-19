@@ -31,9 +31,7 @@ settings/stdout/verbose_stdout=true
 directories/dch_directory={
 "pat": "res://game/pat.dch"
 }
-directories/dtl_directory={
-"timeline": "res://game/hub/timeline.dtl"
-}
+directories/dtl_directory={}
 layout/style_directory={
 "": "res://addons/dialogic/Modules/StyleEditor/Components/vn_textbox_default_panel.tres",
 "style1": "res://addons/dialogic/Modules/StyleEditor/Components/vn_textbox_default_panel.tres"

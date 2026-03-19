@@ -82,3 +82,4 @@ func _on_game_over():
 	game_active = false
 	lives_label.text = "Lives: 0"
 	game_over_label.visible = true
+	level_completed.emit()
