@@ -107,8 +107,8 @@ script = ExtResource("1_hub")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_m6ciy")]
 z_index = 10
-position = Vector2(-508, 28.000017)
-scale = Vector2(1.2, 1.2)
+position = Vector2(-505, 38)
+scale = Vector2(2.2, 2.2)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 0.80000114)
@@ -140,7 +140,7 @@ position = Vector2(672.99994, 4)
 scale = Vector2(2.25, 2.25)
 sprite_frames = SubResource("SpriteFrames_v1qnj")
 autoplay = "default"
-frame_progress = 0.10856913
+frame_progress = 0.4345476
 
 [node name="Dashers" type="Sprite2D" parent="."]
 position = Vector2(522, 27)

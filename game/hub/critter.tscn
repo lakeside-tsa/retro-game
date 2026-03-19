@@ -95,14 +95,17 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_odca0")
 }, {
-"duration": 0.6,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_x8dvd")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_rr82c")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gxuvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rr82c")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y42vr")
@@ -156,24 +159,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87h13"]
-size = Vector2(37, 100)
+size = Vector2(36, 98)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 texture_filter = 1
-scale = Vector2(1.25, 1.25)
 script = ExtResource("1_38t1e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visibility_layer = 5
 texture_filter = 1
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qn8j6")
 animation = &"idle"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.38211733
+frame_progress = 0.61422014
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1)
-scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_87h13")
