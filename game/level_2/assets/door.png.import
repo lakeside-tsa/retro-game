@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl5w4qmwqc7h3"
-path.s3tc="res://.godot/imported/door.png-8f51ca91b08af1327510227af269cd83.s3tc.ctex"
+path="res://.godot/imported/door.png-8f51ca91b08af1327510227af269cd83.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/door.png"
-dest_files=["res://.godot/imported/door.png-8f51ca91b08af1327510227af269cd83.s3tc.ctex"]
+dest_files=["res://.godot/imported/door.png-8f51ca91b08af1327510227af269cd83.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

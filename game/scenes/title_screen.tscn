@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6we0teyq4k2m" path="res://game/src/title_screen.gd" id="1_script"]
 
 [node name="TitleScreen" type="Node2D"]
+position = Vector2(578, 320)
 script = ExtResource("1_script")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -21,6 +22,7 @@ theme_override_font_sizes/font_size = 38
 text = "HIGHSCORE HIJINKS"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Subtitle" type="Label" parent="."]
 offset_left = -300.0
@@ -31,3 +33,4 @@ theme_override_font_sizes/font_size = 16
 text = "[Press Space to Start]"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

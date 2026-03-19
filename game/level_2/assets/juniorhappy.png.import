@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2wsx1dy61dyd"
-path.s3tc="res://.godot/imported/juniorhappy.png-67466f444e1d2af88ef1ce930ff9da1a.s3tc.ctex"
+path="res://.godot/imported/juniorhappy.png-67466f444e1d2af88ef1ce930ff9da1a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/juniorhappy.png"
-dest_files=["res://.godot/imported/juniorhappy.png-67466f444e1d2af88ef1ce930ff9da1a.s3tc.ctex"]
+dest_files=["res://.godot/imported/juniorhappy.png-67466f444e1d2af88ef1ce930ff9da1a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

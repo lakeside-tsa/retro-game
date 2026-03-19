@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2yqixkg2p13c"
-path.s3tc="res://.godot/imported/tapperbackgound.png-9c4873a8545d47c895b14842261a6d4e.s3tc.ctex"
+path="res://.godot/imported/tapperbackgound.png-9c4873a8545d47c895b14842261a6d4e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/tapperbackgound.png"
-dest_files=["res://.godot/imported/tapperbackgound.png-9c4873a8545d47c895b14842261a6d4e.s3tc.ctex"]
+dest_files=["res://.godot/imported/tapperbackgound.png-9c4873a8545d47c895b14842261a6d4e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

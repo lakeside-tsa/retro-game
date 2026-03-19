@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dupp0teid5gyb"
-path.s3tc="res://.godot/imported/tappersprites.png-6cbf135a0f901f64b1c393925cd65299.s3tc.ctex"
+path="res://.godot/imported/tappersprites.png-6cbf135a0f901f64b1c393925cd65299.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_2/assets/tappersprites.png"
-dest_files=["res://.godot/imported/tappersprites.png-6cbf135a0f901f64b1c393925cd65299.s3tc.ctex"]
+dest_files=["res://.godot/imported/tappersprites.png-6cbf135a0f901f64b1c393925cd65299.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

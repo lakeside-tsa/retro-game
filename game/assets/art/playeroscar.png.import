@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dluubt6t45lev"
-path.s3tc="res://.godot/imported/playeroscar.png-9585607f7212bfa3d40ff62ab6299e4c.s3tc.ctex"
+path="res://.godot/imported/playeroscar.png-9585607f7212bfa3d40ff62ab6299e4c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/assets/art/playeroscar.png"
-dest_files=["res://.godot/imported/playeroscar.png-9585607f7212bfa3d40ff62ab6299e4c.s3tc.ctex"]
+dest_files=["res://.godot/imported/playeroscar.png-9585607f7212bfa3d40ff62ab6299e4c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4wgwchtc7jwx"
-path.s3tc="res://.godot/imported/cab_2_broken.png-0f4c8d6cfcce0f045d5b48e522f8526b.s3tc.ctex"
+path="res://.godot/imported/cab_2_broken.png-0f4c8d6cfcce0f045d5b48e522f8526b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/assets/art/cab_2_broken.png"
-dest_files=["res://.godot/imported/cab_2_broken.png-0f4c8d6cfcce0f045d5b48e522f8526b.s3tc.ctex"]
+dest_files=["res://.godot/imported/cab_2_broken.png-0f4c8d6cfcce0f045d5b48e522f8526b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

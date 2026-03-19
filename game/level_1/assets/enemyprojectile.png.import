@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b063cf1bhgbeo"
-path.s3tc="res://.godot/imported/enemyprojectile.png-a0dbfd9e27ccaf0edb6a46b9e793b4d6.s3tc.ctex"
+path="res://.godot/imported/enemyprojectile.png-a0dbfd9e27ccaf0edb6a46b9e793b4d6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://game/level_1/assets/enemyprojectile.png"
-dest_files=["res://.godot/imported/enemyprojectile.png-a0dbfd9e27ccaf0edb6a46b9e793b4d6.s3tc.ctex"]
+dest_files=["res://.godot/imported/enemyprojectile.png-a0dbfd9e27ccaf0edb6a46b9e793b4d6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

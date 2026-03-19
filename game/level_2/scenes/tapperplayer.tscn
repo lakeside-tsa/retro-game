@@ -116,9 +116,8 @@ script = ExtResource("1_hfyo4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hf2n6")
-animation = &"walk"
+animation = &"lose"
 autoplay = "idle"
-frame_progress = 0.0024492152
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 4)
