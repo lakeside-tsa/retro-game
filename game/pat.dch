@@ -1,0 +1,60 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.31098938, 0.89453125, 0.33378398, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 3.5,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://game/assets/audio/p1_jump.mp3",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "pat_joy",
+&"description": "",
+&"display_name": "Pat",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"pat_curious": {
+"export_overrides": {
+"image": "\"res://game/hub/patportrait2.tres\""
+},
+"mirror": false,
+"offset": Vector2(4, 0),
+"scale": 1,
+"scene": ""
+},
+"pat_disappointed": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"pat_joy": {
+"export_overrides": {
+"image": "\"res://game/hub/patportrait1.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
